@@ -27,10 +27,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Viewing page source shows complete SEO meta tags (title, description, OG tags, canonical, JSON-LD SoftwareApplication schema)
   3. CNAME file and .nojekyll file exist in the repo root
   4. Page uses Tailwind CSS v4 via CDN with no build process and no framework JS
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
+- [ ] 01-01-PLAN.md — Infrastructure files (CNAME, .nojekyll) + index.html with complete head metadata, SEO tags, and Tailwind v4 CDN
+- [ ] 01-02-PLAN.md — Page body: sticky nav, section stubs, footer, hamburger JS, visual checkpoint
 
 ### Phase 2: Marketing Sections
 **Goal**: A visitor landing on the page understands what TC-01 is, sees it in action through screenshots and video, and can navigate to app stores or scroll to the web app
@@ -69,6 +70,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & SEO | 0/0 | Not started | - |
+| 1. Foundation & SEO | 0/2 | Planned | - |
 | 2. Marketing Sections | 0/0 | Not started | - |
 | 3. Web App Demo & Pro Activation | 0/0 | Not started | - |
