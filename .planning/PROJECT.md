@@ -2,57 +2,57 @@
 
 ## What This Is
 
-A single-page static website (index.html) for **TC-01 Melody Generator** by **Kaini Instruments** — a web-based melodic sequencer that generates melodies through an 8-transform control system. The landing page serves as both a marketing page and a lightweight web app placeholder, hosted on GitHub Pages with a custom domain. It showcases the product, drives downloads (Google Play, Microsoft Store), and handles Pro license activation via Lemon Squeezy.
+A single-page static marketing website (index.html) for **TC-01 Melody Generator** by **Kaini Instruments** — a web-based melodic sequencer that generates melodies through an 8-transform control system. The page showcases the product through paired feature/image rows, drives downloads (Google Play, Microsoft Store), and upsells Free users to Pro via a Lemon Squeezy checkout link. Hosted on GitHub Pages with a custom domain.
 
 ## Core Value
 
-Convert visitors into users — whether through the web app, Google Play, or Microsoft Store — and upsell Free users to Pro via a Lemon Squeezy license key flow.
+Convert visitors into users — whether through the web app, Google Play, or Microsoft Store — and upsell Free users to Pro via Lemon Squeezy.
 
 ## Requirements
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ SEO-optimized metadata (title, meta description, h1/h2, OG tags, JSON-LD schema) — v1.0
+- ✓ Hero section with headline, subheadline, 3 CTAs (Web App, Google Play, Microsoft Store) — v1.0
+- ✓ Features showcase with 6 paired feature/image alternating rows — v1.0
+- ✓ Phone screenshots and desktop screenshot display — v1.0
+- ✓ Video embed (autoplay muted loop) — v1.0
+- ✓ Free vs Pro comparison section with Buy Pro CTA — v1.0
+- ✓ "Buy a Pro License" link to Lemon Squeezy checkout — v1.0
+- ✓ Contact section with #tally-form-container placeholder — v1.0
+- ✓ Tailwind CSS v4 via CDN, vanilla JS only, no build process — v1.0
+- ✓ GitHub Pages compatible (CNAME, .nojekyll) — v1.0
+- ✓ Charcoal grey dark palette with clean modern marketing design — v1.0
+- ✓ Official Google Play and Microsoft Store badge images — v1.0
+- ✓ Responsive layout (mobile, tablet, desktop) with hamburger nav — v1.0
 
 ### Active
 
-- [ ] SEO-optimized metadata (title, meta description, h1, h2 for "AI Melody Generator", "Music Maker App")
-- [ ] Hero section with headline, subheadline, and 3 CTAs (Launch Web App scroll, Google Play badge, Microsoft Store badge)
-- [ ] Features showcase section highlighting key capabilities (100 scales, 25 contours, 8 transforms, MIDI import, etc.)
-- [ ] Screenshots/gallery section with phone mockups (phone screenshots displayed inside phone frames) and one desktop screenshot
-- [ ] Video embed from phone recording
-- [ ] Web App UI placeholder (static layout — dropdowns, Generate button, audio player placeholder)
-- [ ] Pro badge locking on advanced features (Phrase Mode, MIDI Import, Custom Instruments, etc.)
-- [ ] Pro Activation section/modal with "Activate License Key" input + Submit button
-- [ ] Vanilla JS license key validation (async placeholder for Lemon Squeezy API, localStorage isPro flag, UI unlock)
-- [ ] "Buy a Pro License" text link pointing to Lemon Squeezy checkout
-- [ ] Contact section with `#tally-form-container` div and HTML comment placeholder for Tally.so iframe
-- [ ] Tailwind CSS via CDN (no build process)
-- [ ] Vanilla JavaScript only (no frameworks)
-- [ ] GitHub Pages compatible (strictly static)
-- [ ] Clean, modern marketing design (not retro-hardware — that's the app's aesthetic)
-- [ ] Dark color palette inspired by the app but with polished marketing feel
-- [ ] Official Google Play and Microsoft Store badge images
+- [ ] Replace placeholder URLs (app URL, Lemon Squeezy checkout, Google Play, Microsoft Store)
+- [ ] Add brand image assets (favicon, apple-touch-icon, logos, og-image)
+- [ ] Insert Tally.so embed code into contact form container
+- [ ] Add demo.webm for better video compression (MP4 fallback works)
 
 ### Out of Scope
 
 - Build tools (no npm, no Node.js, no Vite) — strictly static
 - Backend/database — localStorage only
-- Actual audio generation or playback in the demo — static placeholder only
-- In-app checkout cart — only a license key input and external Lemon Squeezy link
+- Actual audio generation or playback — static page only
+- In-app checkout cart — Lemon Squeezy external checkout is the model
 - HTML contact form — Tally.so iframe will be pasted in later
-- Light mode theme
-- The actual TC-01 application code — this is the landing page only
+- Light mode theme — app is dark-only; landing page matches
+- Static web app UI placeholder — removed during v1.0 (license activation handled in-app)
+- License key activation flow on landing page — handled in-app instead
+- Horizontal carousel for phone screenshots — superseded by paired feature/image rows
 
 ## Context
 
-- **Product:** TC-01 is the first in the "Tone Calculator" product range by Kaini Instruments. Future products (TC-02, TC-03) will be integrated into the same app, unlocked via license key upgrades.
-- **Actual app tech:** React 19 + TypeScript + Vite + Tone.js (irrelevant to landing page — landing page is pure HTML/CSS/JS)
-- **App aesthetic:** Dark retro-hardware/industrial (zinc-900, Audiowide font, LED glows). Landing page should be clean modern marketing but can borrow the dark palette.
-- **Monetization:** SaaS loop via Lemon Squeezy to comply with Android App Store policies. Free tier with locked Pro features.
-- **Media assets:** User has phone screenshots (to display in phone frame mockups), 1 desktop UI screenshot, and 1 phone video.
-- **Hosting:** GitHub Pages with custom domain connection.
-- **PRD location:** `C:\Users\fudge\Desktop\MyProjects\Sequencer\PRD.md` — full product spec for content reference.
+Shipped v1.0 with 400 LOC in a single index.html file.
+Tech stack: Tailwind CSS v4 (CDN), vanilla JavaScript, GitHub Pages.
+Charcoal grey palette (#1a1a1a / #2a2a2a) with accent orange #f97316.
+6 paired feature/image alternating rows replaced original grid + carousel approach.
+8 requirements rescoped during v1.0: license activation and static app UI deferred to in-app; carousel superseded by paired rows.
+11 tech debt items remain (mostly placeholder URLs and missing brand assets) — see pre-launch checklist in audit.
 
 ## Constraints
 
@@ -65,11 +65,16 @@ Convert visitors into users — whether through the web app, Google Play, or Mic
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Clean marketing design over retro-hardware | Landing page targets new users who haven't seen the app; clean design converts better | — Pending |
-| Static web app placeholder (not functional demo) | Reduces complexity; app itself is the real demo | — Pending |
-| Feature-based Pro locking (not genre-based) | Locks advanced features like Phrase Mode, MIDI Import — clearer value prop | — Pending |
-| Phone frame mockups for mobile screenshots | Professional presentation of mobile app screenshots | — Pending |
-| Official store badges (not custom buttons) | Trust and recognition from established badge designs | — Pending |
+| Clean marketing design over retro-hardware | Landing page targets new users; clean design converts better | ✓ Good — charcoal palette with modern layout |
+| Static web app placeholder (not functional demo) | Reduces complexity; app itself is the real demo | ✓ Good — further simplified by removing placeholder entirely |
+| Feature-based Pro locking (not genre-based) | Locks advanced features like Phrase Mode, MIDI Import — clearer value prop | ✓ Good — Free vs Pro comparison section |
+| Phone screenshots flat (no CSS device frames) | User preferred flat display with rounded corners | ✓ Good — simpler, cleaner |
+| Official store badges (not custom buttons) | Trust and recognition from established badge designs | ✓ Good |
+| Tailwind v4 via CDN (browser build) | No build tooling needed; strictly static constraint | ✓ Good — bg-linear-to-br syntax required |
+| Charcoal grey over dark navy palette | Better contrast, more professional marketing feel | ✓ Good — applied in Phase 3 |
+| Paired feature/image rows over grid + gallery | Shows features with visual proof side-by-side | ✓ Good — superseded carousel requirement |
+| License activation in-app (not landing page) | Landing page is marketing-only; activation belongs in app | ✓ Good — simplified scope significantly |
+| Lemon Squeezy external checkout (no price on page) | Price lives on checkout page; avoids sync issues | ✓ Good |
 
 ---
-*Last updated: 2026-02-26 after initialization*
+*Last updated: 2026-02-26 after v1.0 milestone*
