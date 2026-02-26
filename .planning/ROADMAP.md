@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation & SEO** - HTML skeleton, infrastructure files, SEO metadata, Tailwind CDN, dark palette baseline (completed 2026-02-26)
 - [x] **Phase 2: Marketing Sections** - Hero, features showcase, gallery with phone mockups, video embed, contact placeholder (completed 2026-02-26)
-- [ ] **Phase 3: Web App Demo & Pro Activation** - Static app UI placeholder with Pro locks, license key activation flow, buy link
+- [ ] **Phase 3: Web App Demo & Pro Activation** - Charcoal palette, paired feature/image layout, Free vs Pro comparison section, Buy Pro CTA
 
 ## Phase Details
 
@@ -50,19 +50,21 @@ Plans:
 - [ ] 02-02-PLAN.md — Gallery (phone screenshot snap carousel, desktop screenshot, autoplay video), visual checkpoint
 
 ### Phase 3: Web App Demo & Pro Activation
-**Goal**: Visitors can preview the app UI inline, see Pro-locked features clearly distinguished from free ones, activate a license key, and find the purchase link
+**Goal**: Visitors see features paired with visual proof, understand Free vs Pro differences, and can purchase a Pro license via Lemon Squeezy -- all on a charcoal grey themed page with updated navigation
 **Depends on**: Phase 2
 **Requirements**: APP-01, APP-02, APP-03, APP-04, PRO-01, PRO-02, PRO-03, PRO-04, PRO-05
 **Success Criteria** (what must be TRUE):
-  1. Static web app UI section shows dropdowns, a Generate button, and an audio player placeholder -- all non-functional but visually representative
-  2. Pro-locked elements (Phrase Mode, MIDI Import, Custom Instruments) display a Pro badge overlay and have data-pro-lock attributes
-  3. Entering a license key shows loading, success, or error states, and on success sets localStorage isPro flag and removes Pro lock badges
-  4. A "Buy a Pro License" link points to the Lemon Squeezy checkout URL
-  5. Refreshing the page after successful activation retains the unlocked Pro state via localStorage
-**Plans**: TBD
+  1. Page uses charcoal grey palette (#1a1a1a / #2a2a2a) instead of dark navy
+  2. Six features displayed in alternating two-column rows with paired screenshots/video
+  3. Free vs Pro comparison section shows two columns with feature lists and Buy Pro CTA
+  4. "Buy a Pro License" link opens Lemon Squeezy checkout in new tab
+  5. Nav shows Features | Pricing | Contact (no Gallery or Web App links)
+  6. #web-app stub section is removed; Hero CTA points to placeholder external URL
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
+- [ ] 03-01-PLAN.md — Charcoal palette swap, nav updates, #web-app removal, paired feature/image alternating layout
+- [ ] 03-02-PLAN.md — Free vs Pro comparison section with Buy CTA, visual checkpoint
 
 ## Progress
 
@@ -73,4 +75,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Foundation & SEO | 2/2 | Complete   | 2026-02-26 |
 | 2. Marketing Sections | 2/2 | Complete   | 2026-02-26 |
-| 3. Web App Demo & Pro Activation | 0/0 | Not started | - |
+| 3. Web App Demo & Pro Activation | 0/2 | Not started | - |
