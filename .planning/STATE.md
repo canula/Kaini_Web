@@ -10,27 +10,27 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 1 of 3 (Foundation & SEO)
-Plan: 1 of 4 in current phase
+Plan: 2 of 4 in current phase
 Status: In progress
-Last activity: 2026-02-26 -- Completed 01-01-PLAN.md
+Last activity: 2026-02-26 -- Completed 01-02-PLAN.md
 
-Progress: [█░░░░░░░░░] 8%
+Progress: [██░░░░░░░░] 17%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 3 min
-- Total execution time: 0.05 hours
+- Total plans completed: 2
+- Average duration: 2 min
+- Total execution time: 0.07 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation-seo | 1 | 3 min | 3 min |
+| 01-foundation-seo | 2 | 4 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (3 min)
+- Last 5 plans: 01-01 (3 min), 01-02 (1 min)
 - Trend: -
 
 *Updated after each plan completion*
@@ -45,6 +45,8 @@ Recent decisions affecting current work:
 - [01-01] Tailwind CSS v4 loaded via CDN (cdn.jsdelivr.net/npm/@tailwindcss/browser@4) — no build tooling required
 - [01-01] Custom color tokens: accent orange #f97316, surface navy #0f172a, surface-alt #1e293b, heading #f8fafc, body #94a3b8
 - [01-01] JSON-LD SoftwareApplication schema placed in head; OG image uses absolute placeholder URL
+- [01-02] Desktop nav and mobile dropdown are separate DOM elements (hidden md:flex vs hidden md:hidden) to avoid Tailwind responsive class conflicts
+- [01-02] Vanilla JS only for hamburger toggle — no frameworks; aria-expanded synced on click, Escape, and link-click
 
 ### Pending Todos
 
@@ -59,5 +61,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 01-01-PLAN.md (GitHub Pages files + index.html head)
+Stopped at: Completed 01-02-PLAN.md task 1 (page body); checkpoint:human-verify awaiting visual verification
 Resume file: None

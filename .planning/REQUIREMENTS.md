@@ -10,7 +10,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### SEO & Metadata
 
 - [x] **SEO-01**: Page has optimized `<title>` and `<meta description>` for "AI Melody Generator" and "Music Maker App"
-- [ ] **SEO-02**: Semantic `<h1>` and `<h2>` tags target primary keywords
+- [x] **SEO-02**: Semantic `<h1>` and `<h2>` tags target primary keywords
 - [x] **SEO-03**: Open Graph tags (og:title, og:description, og:image, og:url) for social sharing
 - [x] **SEO-04**: Canonical URL tag pointing to custom domain
 - [x] **SEO-05**: JSON-LD SoftwareApplication schema for Google rich results
@@ -56,10 +56,10 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Infrastructure
 
 - [x] **INFR-01**: Single `index.html` using Tailwind CSS v4 via CDN (no build process)
-- [ ] **INFR-02**: Vanilla JavaScript only (no frameworks)
+- [x] **INFR-02**: Vanilla JavaScript only (no frameworks)
 - [x] **INFR-03**: `CNAME` file committed to repo root for custom domain
 - [x] **INFR-04**: `.nojekyll` file committed to repo root
-- [ ] **INFR-05**: Dark color palette with clean modern marketing design
+- [x] **INFR-05**: Dark color palette with clean modern marketing design
 
 ## v2 Requirements
 
@@ -99,7 +99,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | SEO-01 | Phase 1 | Complete |
-| SEO-02 | Phase 1 | Pending |
+| SEO-02 | Phase 1 | Complete |
 | SEO-03 | Phase 1 | Complete |
 | SEO-04 | Phase 1 | Complete |
 | SEO-05 | Phase 1 | Complete |
@@ -124,10 +124,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PRO-05 | Phase 3 | Pending |
 | CONT-01 | Phase 2 | Pending |
 | INFR-01 | Phase 1 | Complete |
-| INFR-02 | Phase 1 | Pending |
+| INFR-02 | Phase 1 | Complete |
 | INFR-03 | Phase 1 | Complete |
 | INFR-04 | Phase 1 | Complete |
-| INFR-05 | Phase 1 | Pending |
+| INFR-05 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 30 total
