@@ -29,10 +29,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Gallery
 
-- [ ] **GLRY-01**: Phone screenshots displayed inside CSS phone frame mockups
-- [ ] **GLRY-02**: Desktop UI screenshot display
-- [ ] **GLRY-03**: Embedded phone video (autoplay muted loop playsinline)
-- [ ] **GLRY-04**: Horizontal scroll/carousel on mobile for phone mockups
+- [x] **GLRY-01**: Phone screenshots displayed inside CSS phone frame mockups
+- [x] **GLRY-02**: Desktop UI screenshot display
+- [x] **GLRY-03**: Embedded phone video (autoplay muted loop playsinline)
+- [x] **GLRY-04**: Horizontal scroll/carousel on mobile for phone mockups
 
 ### Web App UI Placeholder
 
@@ -109,10 +109,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HERO-04 | Phase 2 | Complete |
 | FEAT-01 | Phase 2 | Complete |
 | FEAT-02 | Phase 2 | Complete |
-| GLRY-01 | Phase 2 | Pending |
-| GLRY-02 | Phase 2 | Pending |
-| GLRY-03 | Phase 2 | Pending |
-| GLRY-04 | Phase 2 | Pending |
+| GLRY-01 | Phase 2 | Complete |
+| GLRY-02 | Phase 2 | Complete |
+| GLRY-03 | Phase 2 | Complete |
+| GLRY-04 | Phase 2 | Complete |
 | APP-01 | Phase 3 | Pending |
 | APP-02 | Phase 3 | Pending |
 | APP-03 | Phase 3 | Pending |

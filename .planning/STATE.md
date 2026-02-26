@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in_progress
-last_updated: "2026-02-26T17:20:46Z"
+status: unknown
+last_updated: "2026-02-26T17:24:33.409Z"
 progress:
-  total_phases: 3
-  completed_phases: 1
+  total_phases: 2
+  completed_phases: 2
   total_plans: 4
-  completed_plans: 3
+  completed_plans: 4
 ---
 
 # Project State
@@ -48,6 +48,7 @@ Progress: [███░░░░░░░] 25%
 - Trend: -
 
 *Updated after each plan completion*
+| Phase 02-marketing-sections P02 | 1 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -64,6 +65,8 @@ Recent decisions affecting current work:
 - [02-01] Tailwind v4 gradient syntax: bg-linear-to-br (not bg-gradient-to-br — renamed in v4, old class silently fails)
 - [02-01] Phone mockup uses relative path (no leading slash) for GitHub Pages compatibility
 - [02-01] Google Play and MS Store badge links contain TODO comments with placeholder IDs for future replacement
+- [Phase 02-02]: Phone screenshots displayed flat with rounded corners and shadow — no CSS device frames per user decision
+- [Phase 02-02]: HTML5 video includes all 4 mobile autoplay attributes: autoplay muted loop playsinline
 
 ### Pending Todos
 

@@ -13,7 +13,7 @@ This roadmap delivers a static single-page landing site for TC-01 Melody Generat
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation & SEO** - HTML skeleton, infrastructure files, SEO metadata, Tailwind CDN, dark palette baseline (completed 2026-02-26)
-- [ ] **Phase 2: Marketing Sections** - Hero, features showcase, gallery with phone mockups, video embed, contact placeholder
+- [x] **Phase 2: Marketing Sections** - Hero, features showcase, gallery with phone mockups, video embed, contact placeholder (completed 2026-02-26)
 - [ ] **Phase 3: Web App Demo & Pro Activation** - Static app UI placeholder with Pro locks, license key activation flow, buy link
 
 ## Phase Details
@@ -72,5 +72,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & SEO | 2/2 | Complete   | 2026-02-26 |
-| 2. Marketing Sections | 1/2 | In progress | - |
+| 2. Marketing Sections | 2/2 | Complete   | 2026-02-26 |
 | 3. Web App Demo & Pro Activation | 0/0 | Not started | - |
