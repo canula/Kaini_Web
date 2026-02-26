@@ -113,14 +113,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | GLRY-02 | Phase 2 | Complete |
 | GLRY-03 | Phase 2 | Complete |
 | GLRY-04 | Phase 2 | Complete |
-| APP-01 | Phase 3 | Pending |
-| APP-02 | Phase 3 | Pending |
-| APP-03 | Phase 3 | Pending |
-| APP-04 | Phase 3 | Pending |
-| PRO-01 | Phase 3 | Pending |
-| PRO-02 | Phase 3 | Pending |
-| PRO-03 | Phase 3 | Pending |
-| PRO-04 | Phase 3 | Pending |
+| APP-01 | -- | Rescoped: Phase 3 CONTEXT.md removed static app UI placeholder from scope |
+| APP-02 | -- | Rescoped: Phase 3 CONTEXT.md removed static app UI placeholder from scope |
+| APP-03 | Phase 3 | Pending (delivered as Free vs Pro comparison table) |
+| APP-04 | -- | Rescoped: Phase 3 CONTEXT.md removed data-pro-lock attributes from scope |
+| PRO-01 | -- | Rescoped: Phase 3 CONTEXT.md — license activation handled in-app, not on landing page |
+| PRO-02 | -- | Rescoped: Phase 3 CONTEXT.md — license activation handled in-app, not on landing page |
+| PRO-03 | -- | Rescoped: Phase 3 CONTEXT.md — license activation handled in-app, not on landing page |
+| PRO-04 | -- | Rescoped: Phase 3 CONTEXT.md — license activation handled in-app, not on landing page |
 | PRO-05 | Phase 3 | Pending |
 | CONT-01 | Phase 2 | Complete |
 | INFR-01 | Phase 1 | Complete |
@@ -131,9 +131,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 **Coverage:**
 - v1 requirements: 30 total
-- Mapped to phases: 30
-- Unmapped: 0
+- Mapped to phases: 23
+- Rescoped (out of Phase 3 scope per CONTEXT.md): 7 (APP-01, APP-02, APP-04, PRO-01, PRO-02, PRO-03, PRO-04)
 
 ---
 *Requirements defined: 2026-02-26*
-*Last updated: 2026-02-26 after roadmap creation*
+*Last updated: 2026-02-26 after Phase 3 rescope revision*

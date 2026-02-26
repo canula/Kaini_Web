@@ -52,7 +52,7 @@ Plans:
 ### Phase 3: Web App Demo & Pro Activation
 **Goal**: Visitors see features paired with visual proof, understand Free vs Pro differences, and can purchase a Pro license via Lemon Squeezy -- all on a charcoal grey themed page with updated navigation
 **Depends on**: Phase 2
-**Requirements**: APP-01, APP-02, APP-03, APP-04, PRO-01, PRO-02, PRO-03, PRO-04, PRO-05
+**Requirements**: APP-03, PRO-05 (APP-01, APP-02, APP-04, PRO-01, PRO-02, PRO-03, PRO-04 rescoped out -- see REQUIREMENTS.md traceability)
 **Success Criteria** (what must be TRUE):
   1. Page uses charcoal grey palette (#1a1a1a / #2a2a2a) instead of dark navy
   2. Six features displayed in alternating two-column rows with paired screenshots/video
