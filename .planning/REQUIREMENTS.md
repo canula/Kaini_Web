@@ -9,11 +9,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### SEO & Metadata
 
-- [ ] **SEO-01**: Page has optimized `<title>` and `<meta description>` for "AI Melody Generator" and "Music Maker App"
+- [x] **SEO-01**: Page has optimized `<title>` and `<meta description>` for "AI Melody Generator" and "Music Maker App"
 - [ ] **SEO-02**: Semantic `<h1>` and `<h2>` tags target primary keywords
-- [ ] **SEO-03**: Open Graph tags (og:title, og:description, og:image, og:url) for social sharing
-- [ ] **SEO-04**: Canonical URL tag pointing to custom domain
-- [ ] **SEO-05**: JSON-LD SoftwareApplication schema for Google rich results
+- [x] **SEO-03**: Open Graph tags (og:title, og:description, og:image, og:url) for social sharing
+- [x] **SEO-04**: Canonical URL tag pointing to custom domain
+- [x] **SEO-05**: JSON-LD SoftwareApplication schema for Google rich results
 
 ### Hero Section
 
@@ -55,10 +55,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Infrastructure
 
-- [ ] **INFR-01**: Single `index.html` using Tailwind CSS v4 via CDN (no build process)
+- [x] **INFR-01**: Single `index.html` using Tailwind CSS v4 via CDN (no build process)
 - [ ] **INFR-02**: Vanilla JavaScript only (no frameworks)
-- [ ] **INFR-03**: `CNAME` file committed to repo root for custom domain
-- [ ] **INFR-04**: `.nojekyll` file committed to repo root
+- [x] **INFR-03**: `CNAME` file committed to repo root for custom domain
+- [x] **INFR-04**: `.nojekyll` file committed to repo root
 - [ ] **INFR-05**: Dark color palette with clean modern marketing design
 
 ## v2 Requirements
@@ -98,11 +98,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SEO-01 | Phase 1 | Pending |
+| SEO-01 | Phase 1 | Complete |
 | SEO-02 | Phase 1 | Pending |
-| SEO-03 | Phase 1 | Pending |
-| SEO-04 | Phase 1 | Pending |
-| SEO-05 | Phase 1 | Pending |
+| SEO-03 | Phase 1 | Complete |
+| SEO-04 | Phase 1 | Complete |
+| SEO-05 | Phase 1 | Complete |
 | HERO-01 | Phase 2 | Pending |
 | HERO-02 | Phase 2 | Pending |
 | HERO-03 | Phase 2 | Pending |
@@ -123,10 +123,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PRO-04 | Phase 3 | Pending |
 | PRO-05 | Phase 3 | Pending |
 | CONT-01 | Phase 2 | Pending |
-| INFR-01 | Phase 1 | Pending |
+| INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Pending |
-| INFR-03 | Phase 1 | Pending |
-| INFR-04 | Phase 1 | Pending |
+| INFR-03 | Phase 1 | Complete |
+| INFR-04 | Phase 1 | Complete |
 | INFR-05 | Phase 1 | Pending |
 
 **Coverage:**
