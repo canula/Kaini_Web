@@ -229,8 +229,52 @@
     <!-- Gallery Section -->
     <section id="gallery" class="bg-surface py-24">
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-heading mb-4">Gallery</h2>
-        <p class="text-body">Screenshots and video coming soon.</p>
+        <h2 class="text-3xl font-bold text-heading mb-3">See it in action</h2>
+        <p class="text-body mb-10">TC-01 on Android — swipe through the screenshots.</p>
+
+        <!-- Phone Screenshot Snap Carousel -->
+        <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4
+                    [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <div class="snap-center shrink-0 w-48 md:w-56">
+            <img src="assets/images/screenshots/phone-01.png" alt="TC-01 screenshot 1 — main melody generator screen" class="rounded-2xl shadow-lg w-full" />
+          </div>
+          <div class="snap-center shrink-0 w-48 md:w-56">
+            <img src="assets/images/screenshots/phone-02.png" alt="TC-01 screenshot 2 — sequencer step editor" class="rounded-2xl shadow-lg w-full" />
+          </div>
+          <div class="snap-center shrink-0 w-48 md:w-56">
+            <img src="assets/images/screenshots/phone-03.png" alt="TC-01 screenshot 3 — pattern library and presets" class="rounded-2xl shadow-lg w-full" />
+          </div>
+          <div class="snap-center shrink-0 w-48 md:w-56">
+            <img src="assets/images/screenshots/phone-04.png" alt="TC-01 screenshot 4 — BPM and timing controls" class="rounded-2xl shadow-lg w-full" />
+          </div>
+          <div class="snap-center shrink-0 w-48 md:w-56">
+            <img src="assets/images/screenshots/phone-05.png" alt="TC-01 screenshot 5 — scale and key selector" class="rounded-2xl shadow-lg w-full" />
+          </div>
+          <div class="snap-center shrink-0 w-48 md:w-56">
+            <img src="assets/images/screenshots/phone-06.png" alt="TC-01 screenshot 6 — MIDI export options" class="rounded-2xl shadow-lg w-full" />
+          </div>
+          <div class="snap-center shrink-0 w-48 md:w-56">
+            <img src="assets/images/screenshots/phone-07.png" alt="TC-01 screenshot 7 — chord progression generator" class="rounded-2xl shadow-lg w-full" />
+          </div>
+          <div class="snap-center shrink-0 w-48 md:w-56">
+            <img src="assets/images/screenshots/phone-08.png" alt="TC-01 screenshot 8 — settings and preferences" class="rounded-2xl shadow-lg w-full" />
+          </div>
+        </div>
+
+        <!-- Desktop Screenshot -->
+        <div class="mt-12">
+          <img src="assets/images/screenshots/desktop-01.png" alt="TC-01 desktop interface" class="rounded-2xl shadow-lg w-full" />
+        </div>
+
+        <!-- Video Embed -->
+        <div class="mt-12 flex justify-center">
+          <video autoplay muted loop playsinline
+                 poster="assets/images/screenshots/phone-01.png"
+                 class="w-48 md:w-64 rounded-2xl shadow-lg">
+            <source src="assets/videos/demo.webm" type="video/webm" />
+            <source src="assets/videos/demo.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
     </section>
 
