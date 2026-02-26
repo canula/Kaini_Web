@@ -38,7 +38,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **APP-01**: Static layout with dropdowns for genre selection and a "Generate" button
 - [ ] **APP-02**: Audio player placeholder element
-- [ ] **APP-03**: Pro badge overlay on advanced features (Phrase Mode, MIDI Import, Custom Instruments)
+- [x] **APP-03**: Pro badge overlay on advanced features (Phrase Mode, MIDI Import, Custom Instruments)
 - [ ] **APP-04**: `data-pro-lock` attributes on locked elements for JS targeting
 
 ### Pro Activation
