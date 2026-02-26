@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -67,6 +67,139 @@
     </style>
   </head>
   <body class="bg-surface text-body font-['Inter',sans-serif]">
-    <!-- Nav, sections, and footer will be added in Plan 02 -->
+
+    <!-- Sticky Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-nav/90 backdrop-blur-sm border-b border-white/10">
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <!-- Brand -->
+        <a href="#" class="flex items-center gap-3">
+          <img src="/assets/images/tc01-logo.png" alt="TC-01 Logo" class="h-8 w-auto" />
+          <div>
+            <span class="text-heading font-bold text-lg">TC-01</span>
+            <span class="text-body text-sm ml-1 hidden sm:inline">Tone Calculator</span>
+          </div>
+        </a>
+
+        <!-- Desktop nav links (hidden on mobile) -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#features" class="text-body hover:text-heading transition-colors">Features</a>
+          <a href="#gallery" class="text-body hover:text-heading transition-colors">Gallery</a>
+          <a href="#web-app" class="text-body hover:text-heading transition-colors">Web App</a>
+          <a href="#contact" class="text-body hover:text-heading transition-colors">Contact</a>
+        </div>
+
+        <!-- Hamburger button (visible on mobile only) -->
+        <button
+          id="nav-toggle"
+          aria-controls="mobile-menu-dropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="md:hidden p-2 text-body hover:text-heading transition-colors"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile menu dropdown (hidden by default, toggled by JS) -->
+      <div id="mobile-menu-dropdown" class="hidden md:hidden bg-nav/95 backdrop-blur-sm border-t border-white/10 px-6 py-4 space-y-4">
+        <a href="#features" class="block text-body hover:text-heading transition-colors">Features</a>
+        <a href="#gallery" class="block text-body hover:text-heading transition-colors">Gallery</a>
+        <a href="#web-app" class="block text-body hover:text-heading transition-colors">Web App</a>
+        <a href="#contact" class="block text-body hover:text-heading transition-colors">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-surface pt-32 pb-24">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-heading mb-6">
+          Melody Generator App
+        </h1>
+        <p class="text-lg md:text-xl text-body max-w-2xl mx-auto">
+          Create melodies in seconds — no music theory needed. Available on Android, Windows, and Web.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="bg-surface-alt py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-heading mb-4">Features</h2>
+        <p class="text-body">Feature highlights coming soon.</p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="bg-surface py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-heading mb-4">Gallery</h2>
+        <p class="text-body">Screenshots and video coming soon.</p>
+      </div>
+    </section>
+
+    <!-- Web App Section -->
+    <section id="web-app" class="bg-surface-alt py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-heading mb-4">Web App</h2>
+        <p class="text-body">Try the melody generator directly in your browser — coming soon.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-surface py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-heading mb-4">Contact</h2>
+        <p class="text-body">Get in touch — coming soon.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-white/10 py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <!-- Kaini logo + copyright -->
+          <div class="flex items-center gap-3">
+            <img src="/assets/images/kaini-logo.png" alt="Kaini Instruments Logo" class="h-6 w-auto" />
+            <span class="text-body text-sm">&copy; 2026 Kaini Instruments. All rights reserved.</span>
+          </div>
+          <!-- Legal links -->
+          <div class="flex gap-6">
+            <a href="#" class="text-body text-sm hover:text-heading transition-colors">Privacy Policy</a>
+            <a href="#" class="text-body text-sm hover:text-heading transition-colors">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Vanilla JS Hamburger Toggle -->
+    <script>
+      const navToggle = document.getElementById('nav-toggle');
+      const mobileMenuDropdown = document.getElementById('mobile-menu-dropdown');
+
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        mobileMenuDropdown.classList.toggle('hidden');
+      });
+
+      // Close menu on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          navToggle.setAttribute('aria-expanded', 'false');
+          mobileMenuDropdown.classList.add('hidden');
+        }
+      });
+
+      // Close menu when a nav link is clicked (smooth scroll then close)
+      mobileMenuDropdown.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          navToggle.setAttribute('aria-expanded', 'false');
+          mobileMenuDropdown.classList.add('hidden');
+        });
+      });
+    </script>
+
   </body>
 </html>
