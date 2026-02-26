@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: unknown
-last_updated: "2026-02-26T15:57:50.792Z"
+status: in_progress
+last_updated: "2026-02-26T17:20:46Z"
 progress:
-  total_phases: 1
+  total_phases: 3
   completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
+  total_plans: 4
+  completed_plans: 3
 ---
 
 # Project State
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Convert visitors into users and upsell Free users to Pro via Lemon Squeezy license key flow
-**Current focus:** Phase 1 - Foundation & SEO
+**Current focus:** Phase 2 - Marketing Sections
 
 ## Current Position
 
-Phase: 1 of 3 (Foundation & SEO)
-Plan: 3 of 4 in current phase
+Phase: 2 of 3 (Marketing Sections)
+Plan: 2 of 2 in current phase
 Status: In progress
-Last activity: 2026-02-26 -- Completed 01-02-PLAN.md (visual checkpoint approved)
+Last activity: 2026-02-26 -- Completed 02-01-PLAN.md (hero, features, contact sections built)
 
-Progress: [██░░░░░░░░] 17%
+Progress: [███░░░░░░░] 25%
 
 ## Performance Metrics
 
@@ -41,9 +41,10 @@ Progress: [██░░░░░░░░] 17%
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation-seo | 2 | 4 min | 2 min |
+| 02-marketing-sections | 1 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (3 min), 01-02 (1 min)
+- Last 5 plans: 01-01 (3 min), 01-02 (1 min), 02-01 (2 min)
 - Trend: -
 
 *Updated after each plan completion*
@@ -60,6 +61,9 @@ Recent decisions affecting current work:
 - [01-01] JSON-LD SoftwareApplication schema placed in head; OG image uses absolute placeholder URL
 - [01-02] Desktop nav and mobile dropdown are separate DOM elements (hidden md:flex vs hidden md:hidden) to avoid Tailwind responsive class conflicts
 - [01-02] Vanilla JS only for hamburger toggle — no frameworks; aria-expanded synced on click, Escape, and link-click
+- [02-01] Tailwind v4 gradient syntax: bg-linear-to-br (not bg-gradient-to-br — renamed in v4, old class silently fails)
+- [02-01] Phone mockup uses relative path (no leading slash) for GitHub Pages compatibility
+- [02-01] Google Play and MS Store badge links contain TODO comments with placeholder IDs for future replacement
 
 ### Pending Todos
 
@@ -74,5 +78,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 01-02-PLAN.md — all tasks done including checkpoint:human-verify (approved)
+Stopped at: Completed 02-01-PLAN.md — hero, features, and contact sections built
 Resume file: None

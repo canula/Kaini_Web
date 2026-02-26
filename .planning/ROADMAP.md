@@ -43,10 +43,11 @@ Plans:
   3. Gallery shows phone screenshots inside CSS phone frame mockups with horizontal snap-scroll on mobile, a desktop screenshot, and an embedded autoplay-muted video
   4. Contact section contains a #tally-form-container div with an HTML comment placeholder for Tally.so
   5. Page is responsive across mobile (375px), tablet (768px), and desktop (1280px) viewports
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: TBD
+- [x] 02-01-PLAN.md — Hero section (split layout, gradient, 3 CTAs, store badges), features grid (6 capabilities with SVG icons), contact placeholder
+- [ ] 02-02-PLAN.md — Gallery (phone screenshot snap carousel, desktop screenshot, autoplay video), visual checkpoint
 
 ### Phase 3: Web App Demo & Pro Activation
 **Goal**: Visitors can preview the app UI inline, see Pro-locked features clearly distinguished from free ones, activate a license key, and find the purchase link
@@ -71,5 +72,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & SEO | 2/2 | Complete   | 2026-02-26 |
-| 2. Marketing Sections | 0/0 | Not started | - |
+| 2. Marketing Sections | 1/2 | In progress | - |
 | 3. Web App Demo & Pro Activation | 0/0 | Not started | - |

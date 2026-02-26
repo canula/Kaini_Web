@@ -17,15 +17,15 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Hero Section
 
-- [ ] **HERO-01**: Clean headline and subheadline explaining the value proposition
-- [ ] **HERO-02**: "Launch Web App" CTA button that smooth-scrolls to web app section
-- [ ] **HERO-03**: Official Google Play badge with placeholder link
-- [ ] **HERO-04**: Official Microsoft Store badge with placeholder link
+- [x] **HERO-01**: Clean headline and subheadline explaining the value proposition
+- [x] **HERO-02**: "Launch Web App" CTA button that smooth-scrolls to web app section
+- [x] **HERO-03**: Official Google Play badge with placeholder link
+- [x] **HERO-04**: Official Microsoft Store badge with placeholder link
 
 ### Features Showcase
 
-- [ ] **FEAT-01**: Section highlighting 6-8 key capabilities with benefits-first language
-- [ ] **FEAT-02**: Visual icons or illustrations for each feature
+- [x] **FEAT-01**: Section highlighting 6-8 key capabilities with benefits-first language
+- [x] **FEAT-02**: Visual icons or illustrations for each feature
 
 ### Gallery
 
@@ -51,7 +51,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Contact
 
-- [ ] **CONT-01**: Contact section with centered `#tally-form-container` div and HTML comment placeholder
+- [x] **CONT-01**: Contact section with centered `#tally-form-container` div and HTML comment placeholder
 
 ### Infrastructure
 
@@ -103,12 +103,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SEO-03 | Phase 1 | Complete |
 | SEO-04 | Phase 1 | Complete |
 | SEO-05 | Phase 1 | Complete |
-| HERO-01 | Phase 2 | Pending |
-| HERO-02 | Phase 2 | Pending |
-| HERO-03 | Phase 2 | Pending |
-| HERO-04 | Phase 2 | Pending |
-| FEAT-01 | Phase 2 | Pending |
-| FEAT-02 | Phase 2 | Pending |
+| HERO-01 | Phase 2 | Complete |
+| HERO-02 | Phase 2 | Complete |
+| HERO-03 | Phase 2 | Complete |
+| HERO-04 | Phase 2 | Complete |
+| FEAT-01 | Phase 2 | Complete |
+| FEAT-02 | Phase 2 | Complete |
 | GLRY-01 | Phase 2 | Pending |
 | GLRY-02 | Phase 2 | Pending |
 | GLRY-03 | Phase 2 | Pending |
@@ -122,7 +122,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PRO-03 | Phase 3 | Pending |
 | PRO-04 | Phase 3 | Pending |
 | PRO-05 | Phase 3 | Pending |
-| CONT-01 | Phase 2 | Pending |
+| CONT-01 | Phase 2 | Complete |
 | INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Complete |
 | INFR-03 | Phase 1 | Complete |
