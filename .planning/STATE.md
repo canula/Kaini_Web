@@ -6,9 +6,9 @@ status: unknown
 last_updated: "2026-02-26T19:39:13.568Z"
 progress:
   total_phases: 3
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 6
-  completed_plans: 5
+  completed_plans: 6
 ---
 
 # Project State
@@ -23,11 +23,11 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 3 of 3 (Web App Demo & Pro Activation)
-Plan: 1 of 2 in current phase
-Status: In Progress
-Last activity: 2026-02-26 -- Completed 03-01-PLAN.md (charcoal palette, nav cleanup, paired feature/image alternating rows)
+Plan: 2 of 2 in current phase
+Status: Complete
+Last activity: 2026-02-26 -- Completed 03-02-PLAN.md (Free vs Pro comparison section, Lemon Squeezy CTA)
 
-Progress: [████████░░] 83%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -51,6 +51,7 @@ Progress: [████████░░] 83%
 | Phase 02-marketing-sections P02 | 1 | 1 tasks | 1 files |
 | Phase 02-marketing-sections P02 | 15 | 2 tasks | 2 files |
 | Phase 03-web-app-demo-pro-activation P01 | 2 | 2 tasks | 1 files |
+| Phase 03-web-app-demo-pro-activation P02 | 5 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,8 @@ Recent decisions affecting current work:
 - [Phase 03-01]: Charcoal values #1a1a1a (surface/nav) and #2a2a2a (surface-alt) chosen for palette swap
 - [Phase 03-01]: Feature row order: Record Voice (desktop screenshot), MIDI Import, Presets (video), Phrase Generation, Microtonal, Note Edit Tracker — phone-03.png used for Microtonal
 - [Phase 03-01]: Hero Launch Web App CTA updated to PLACEHOLDER_APP_URL with target=_blank
+- [Phase 03-02]: Lemon Squeezy URL uses PLACEHOLDER.lemonsqueezy.com/checkout — no price on page, price lives on checkout page
+- [Phase 03-02]: Pro column uses border-2 border-accent for visual distinction; license key delivery copy added below CTA
 
 ### Pending Todos
 
@@ -90,5 +93,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 03-01-PLAN.md — charcoal palette swap, nav cleanup, paired feature/image alternating rows; ready for 03-02
+Stopped at: Completed 03-02-PLAN.md — Free vs Pro comparison section with Lemon Squeezy CTA; all phases complete
 Resume file: None

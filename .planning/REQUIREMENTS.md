@@ -47,7 +47,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **PRO-02**: Async placeholder function for Lemon Squeezy API license validation
 - [ ] **PRO-03**: On success, set `localStorage.setItem('isPro', 'true')` and unlock Pro UI
 - [ ] **PRO-04**: Loading, success, and error states on activation
-- [ ] **PRO-05**: "Buy a Pro License" text link to Lemon Squeezy checkout URL
+- [x] **PRO-05**: "Buy a Pro License" text link to Lemon Squeezy checkout URL
 
 ### Contact
 
@@ -121,7 +121,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PRO-02 | -- | Rescoped: Phase 3 CONTEXT.md — license activation handled in-app, not on landing page |
 | PRO-03 | -- | Rescoped: Phase 3 CONTEXT.md — license activation handled in-app, not on landing page |
 | PRO-04 | -- | Rescoped: Phase 3 CONTEXT.md — license activation handled in-app, not on landing page |
-| PRO-05 | Phase 3 | Pending |
+| PRO-05 | Phase 3 | Complete |
 | CONT-01 | Phase 2 | Complete |
 | INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Complete |
