@@ -36,11 +36,11 @@ Plans:
 ### Phase 2: Marketing Sections
 **Goal**: A visitor landing on the page understands what TC-01 is, sees it in action through screenshots and video, and can navigate to app stores or scroll to the web app
 **Depends on**: Phase 1
-**Requirements**: HERO-01, HERO-02, HERO-03, HERO-04, FEAT-01, FEAT-02, GLRY-01, GLRY-02, GLRY-03, GLRY-04, CONT-01
+**Requirements**: HERO-01, HERO-02, HERO-03, HERO-04, FEAT-01, FEAT-02, GLRY-01, GLRY-02, GLRY-03, CONT-01 (GLRY-04 rescoped — superseded by Phase 3 paired rows)
 **Success Criteria** (what must be TRUE):
   1. Hero section displays headline, subheadline, and three CTAs (Launch Web App smooth-scroll, Google Play badge, Microsoft Store badge)
   2. Features section presents 6-8 capabilities with icons and benefits-first copy
-  3. Gallery shows phone screenshots inside CSS phone frame mockups with horizontal snap-scroll on mobile, a desktop screenshot, and an embedded autoplay-muted video
+  3. Gallery shows phone screenshots in paired feature/image rows, a desktop screenshot, and an embedded autoplay-muted video (GLRY-04 carousel rescoped — superseded by Phase 3 layout)
   4. Contact section contains a #tally-form-container div with an HTML comment placeholder for Tally.so
   5. Page is responsive across mobile (375px), tablet (768px), and desktop (1280px) viewports
 **Plans**: 2 plans

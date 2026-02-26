@@ -32,7 +32,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **GLRY-01**: Phone screenshots displayed inside CSS phone frame mockups
 - [x] **GLRY-02**: Desktop UI screenshot display
 - [x] **GLRY-03**: Embedded phone video (autoplay muted loop playsinline)
-- [x] **GLRY-04**: Horizontal scroll/carousel on mobile for phone mockups
+- [x] **GLRY-04**: ~~Horizontal scroll/carousel on mobile for phone mockups~~ Rescoped: Superseded by Phase 3 paired feature/image rows (user-approved)
 
 ### Web App UI Placeholder
 
@@ -112,10 +112,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | GLRY-01 | Phase 2 | Complete |
 | GLRY-02 | Phase 2 | Complete |
 | GLRY-03 | Phase 2 | Complete |
-| GLRY-04 | Phase 2 | Complete |
+| GLRY-04 | -- | Rescoped: Superseded by Phase 3 paired feature/image rows (user-approved) |
 | APP-01 | -- | Rescoped: Phase 3 CONTEXT.md removed static app UI placeholder from scope |
 | APP-02 | -- | Rescoped: Phase 3 CONTEXT.md removed static app UI placeholder from scope |
-| APP-03 | Phase 3 | Pending (delivered as Free vs Pro comparison table) |
+| APP-03 | Phase 3 | Complete |
 | APP-04 | -- | Rescoped: Phase 3 CONTEXT.md removed data-pro-lock attributes from scope |
 | PRO-01 | -- | Rescoped: Phase 3 CONTEXT.md — license activation handled in-app, not on landing page |
 | PRO-02 | -- | Rescoped: Phase 3 CONTEXT.md — license activation handled in-app, not on landing page |
@@ -131,8 +131,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 **Coverage:**
 - v1 requirements: 30 total
-- Mapped to phases: 23
-- Rescoped (out of Phase 3 scope per CONTEXT.md): 7 (APP-01, APP-02, APP-04, PRO-01, PRO-02, PRO-03, PRO-04)
+- Mapped to phases: 22
+- Rescoped: 8 (APP-01, APP-02, APP-04, PRO-01, PRO-02, PRO-03, PRO-04, GLRY-04)
 
 ---
 *Requirements defined: 2026-02-26*
