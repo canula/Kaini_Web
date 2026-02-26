@@ -150,126 +150,109 @@
     <section id="features" class="bg-surface-alt py-24">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-heading mb-3">Features</h2>
-        <p class="text-body mb-12">Everything you need to create melodies your way.</p>
+        <p class="text-body mb-16">Everything you need to create melodies your way.</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          <!-- 1. Record Voice -->
-          <div class="bg-surface rounded-xl p-6 flex gap-4">
-            <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
-            </svg>
-            <div>
-              <h3 class="text-heading font-semibold mb-1">Record Voice</h3>
-              <p class="text-body text-sm">Hum a melody and TC-01 transcribes it into notes instantly. No keyboard, no theory — just sing what's in your head.</p>
+        <!-- Row 1: Record Voice — text left, image right -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">Record Voice</h3>
             </div>
+            <p class="text-body">Hum a melody and TC-01 transcribes it into notes instantly. No keyboard, no theory — just sing what's in your head.</p>
           </div>
-
-          <!-- 2. MIDI Import -->
-          <div class="bg-surface rounded-xl p-6 flex gap-4">
-            <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-            </svg>
-            <div>
-              <h3 class="text-heading font-semibold mb-1">MIDI Import</h3>
-              <p class="text-body text-sm">Bring in MIDI files from your DAW or other apps. Edit, transform, and build on melodies you've already started.</p>
-            </div>
-          </div>
-
-          <!-- 3. Motion/Contour/Rhythm Presets -->
-          <div class="bg-surface rounded-xl p-6 flex gap-4">
-            <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
-            </svg>
-            <div>
-              <h3 class="text-heading font-semibold mb-1">Motion / Contour / Rhythm Presets</h3>
-              <p class="text-body text-sm">Choose from built-in motion shapes, contour curves, and rhythm patterns. Mix and match presets to discover unexpected melodies.</p>
-            </div>
-          </div>
-
-          <!-- 4. Phrase Generation -->
-          <div class="bg-surface rounded-xl p-6 flex gap-4">
-            <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
-            </svg>
-            <div>
-              <h3 class="text-heading font-semibold mb-1">Phrase Generation</h3>
-              <p class="text-body text-sm">Generate complete musical phrases with one tap. TC-01 combines your settings into playable melodies — tweak the results or start fresh.</p>
-            </div>
-          </div>
-
-          <!-- 5. Microtonal Support -->
-          <div class="bg-surface rounded-xl p-6 flex gap-4">
-            <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" />
-            </svg>
-            <div>
-              <h3 class="text-heading font-semibold mb-1">Microtonal Support</h3>
-              <p class="text-body text-sm">Go beyond standard tuning. TC-01 supports microtonal scales so you can explore quarter-tones, just intonation, and custom tunings.</p>
-            </div>
-          </div>
-
-          <!-- 6. Note Edit Tracker -->
-          <div class="bg-surface rounded-xl p-6 flex gap-4">
-            <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-            </svg>
-            <div>
-              <h3 class="text-heading font-semibold mb-1">Note Edit Tracker</h3>
-              <p class="text-body text-sm">See every change you make, note by note. The edit tracker keeps a full history so you can undo, compare, and refine your melodies.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="bg-surface py-24">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-heading mb-3">See it in action</h2>
-        <p class="text-body mb-10">TC-01 on Android — swipe through the screenshots.</p>
-
-        <!-- Phone Screenshot Snap Carousel -->
-        <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4
-                    [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-          <div class="snap-center shrink-0 w-48 md:w-56">
-            <img src="assets/images/screenshots/phone-01.png" alt="TC-01 screenshot 1 — main melody generator screen" class="rounded-2xl shadow-lg w-full" />
-          </div>
-          <div class="snap-center shrink-0 w-48 md:w-56">
-            <img src="assets/images/screenshots/phone-02.png" alt="TC-01 screenshot 2 — MIDI import" class="rounded-2xl shadow-lg w-full" />
-          </div>
-          <div class="snap-center shrink-0 w-48 md:w-56">
-            <img src="assets/images/screenshots/phone-03.png" alt="TC-01 screenshot 3 — contour transform" class="rounded-2xl shadow-lg w-full" />
-          </div>
-          <div class="snap-center shrink-0 w-48 md:w-56">
-            <img src="assets/images/screenshots/phone-04.png" alt="TC-01 screenshot 4 — rhythm transform" class="rounded-2xl shadow-lg w-full" />
-          </div>
-          <div class="snap-center shrink-0 w-48 md:w-56">
-            <img src="assets/images/screenshots/phone-05.png" alt="TC-01 screenshot 5 — ornamentation transform" class="rounded-2xl shadow-lg w-full" />
-          </div>
-          <div class="snap-center shrink-0 w-48 md:w-56">
-            <img src="assets/images/screenshots/phone-06.png" alt="TC-01 screenshot 6 — phrase generation" class="rounded-2xl shadow-lg w-full" />
-          </div>
-          <div class="snap-center shrink-0 w-48 md:w-56">
-            <img src="assets/images/screenshots/phone-07.png" alt="TC-01 screenshot 7 — note editor with shimmer effect" class="rounded-2xl shadow-lg w-full" />
+          <div class="flex justify-center">
+            <img src="assets/images/screenshots/desktop-01.png" alt="TC-01 desktop interface showing voice recording" class="w-full rounded-2xl shadow-lg" />
           </div>
         </div>
 
-        <!-- Desktop Screenshot -->
-        <div class="mt-12">
-          <img src="assets/images/screenshots/desktop-01.png" alt="TC-01 desktop interface" class="rounded-2xl shadow-lg w-full" />
+        <!-- Row 2: MIDI Import — image left, text right -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+          <div class="md:order-last">
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">MIDI Import</h3>
+            </div>
+            <p class="text-body">Bring in MIDI files from your DAW or other apps. Edit, transform, and build on melodies you've already started.</p>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/screenshots/phone-02.png" alt="TC-01 MIDI import screen" class="w-48 md:w-56 rounded-2xl shadow-lg" />
+          </div>
         </div>
 
-        <!-- Video Embed -->
-        <div class="mt-12 flex justify-center">
-          <video autoplay muted loop playsinline
-                 poster="assets/images/screenshots/phone-01.png"
-                 class="w-48 md:w-64 rounded-2xl shadow-lg">
-            <source src="assets/videos/demo.webm" type="video/webm" />
-            <source src="assets/videos/demo.mp4" type="video/mp4" />
-          </video>
+        <!-- Row 3: Motion / Contour / Rhythm Presets — text left, video right -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">Motion / Contour / Rhythm Presets</h3>
+            </div>
+            <p class="text-body">Choose from built-in motion shapes, contour curves, and rhythm patterns. Mix and match presets to discover unexpected melodies.</p>
+          </div>
+          <div class="flex justify-center">
+            <video autoplay muted loop playsinline
+                   poster="assets/images/screenshots/phone-01.png"
+                   class="w-48 md:w-64 rounded-2xl shadow-lg">
+              <source src="assets/videos/demo.webm" type="video/webm" />
+              <source src="assets/videos/demo.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
+
+        <!-- Row 4: Phrase Generation — image left, text right -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+          <div class="md:order-last">
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">Phrase Generation</h3>
+            </div>
+            <p class="text-body">Generate complete musical phrases with one tap. TC-01 combines your settings into playable melodies — tweak the results or start fresh.</p>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/screenshots/phone-06.png" alt="TC-01 phrase generation screen" class="w-48 md:w-56 rounded-2xl shadow-lg" />
+          </div>
+        </div>
+
+        <!-- Row 5: Microtonal Support — text left, image right -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">Microtonal Support</h3>
+            </div>
+            <p class="text-body">Go beyond standard tuning. TC-01 supports microtonal scales so you can explore quarter-tones, just intonation, and custom tunings.</p>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/screenshots/phone-03.png" alt="TC-01 microtonal tuning screen" class="w-48 md:w-56 rounded-2xl shadow-lg" />
+          </div>
+        </div>
+
+        <!-- Row 6: Note Edit Tracker — image left, text right (no border-b) -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16">
+          <div class="md:order-last">
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">Note Edit Tracker</h3>
+            </div>
+            <p class="text-body">See every change you make, note by note. The edit tracker keeps a full history so you can undo, compare, and refine your melodies.</p>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/screenshots/phone-07.png" alt="TC-01 note editor with shimmer effect" class="w-48 md:w-56 rounded-2xl shadow-lg" />
+          </div>
+        </div>
+
       </div>
     </section>
 
