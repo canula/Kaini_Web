@@ -23,7 +23,7 @@
     <!-- Favicon and browser tab -->
     <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
-    <meta name="theme-color" content="#0f172a" />
+    <meta name="theme-color" content="#1a1a1a" />
 
     <!-- Google Fonts — Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,11 +58,11 @@
       @theme {
         --color-accent: #f97316;
         --color-accent-hover: #ea580c;
-        --color-surface: #0f172a;
-        --color-surface-alt: #1e293b;
+        --color-surface: #1a1a1a;
+        --color-surface-alt: #2a2a2a;
         --color-heading: #f8fafc;
         --color-body: #94a3b8;
-        --color-nav: #0f172a;
+        --color-nav: #1a1a1a;
       }
     </style>
   </head>
@@ -83,8 +83,7 @@
         <!-- Desktop nav links (hidden on mobile) -->
         <div class="hidden md:flex items-center gap-8">
           <a href="#features" class="text-body hover:text-heading transition-colors">Features</a>
-          <a href="#gallery" class="text-body hover:text-heading transition-colors">Gallery</a>
-          <a href="#web-app" class="text-body hover:text-heading transition-colors">Web App</a>
+          <a href="#pricing" class="text-body hover:text-heading transition-colors">Pricing</a>
           <a href="#contact" class="text-body hover:text-heading transition-colors">Contact</a>
         </div>
 
@@ -105,8 +104,7 @@
       <!-- Mobile menu dropdown (hidden by default, toggled by JS) -->
       <div id="mobile-menu-dropdown" class="hidden md:hidden bg-nav/95 backdrop-blur-sm border-t border-white/10 px-6 py-4 space-y-4">
         <a href="#features" class="block text-body hover:text-heading transition-colors">Features</a>
-        <a href="#gallery" class="block text-body hover:text-heading transition-colors">Gallery</a>
-        <a href="#web-app" class="block text-body hover:text-heading transition-colors">Web App</a>
+        <a href="#pricing" class="block text-body hover:text-heading transition-colors">Pricing</a>
         <a href="#contact" class="block text-body hover:text-heading transition-colors">Contact</a>
       </div>
     </header>
@@ -127,7 +125,7 @@
           </p>
           <!-- CTA row -->
           <div class="flex flex-wrap items-center gap-4">
-            <a href="#web-app" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+            <a href="https://PLACEHOLDER_APP_URL" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors">
               Launch Web App
             </a>
             <a href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME" target="_blank" rel="noopener noreferrer">
@@ -272,14 +270,6 @@
             <source src="assets/videos/demo.mp4" type="video/mp4" />
           </video>
         </div>
-      </div>
-    </section>
-
-    <!-- Web App Section -->
-    <section id="web-app" class="bg-surface-alt py-24">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-heading mb-4">Web App</h2>
-        <p class="text-body">Try the melody generator directly in your browser — coming soon.</p>
       </div>
     </section>
 
