@@ -3,7 +3,7 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-02-26T17:24:33.409Z"
+last_updated: "2026-02-26T17:39:53.852Z"
 progress:
   total_phases: 2
   completed_phases: 2
@@ -18,16 +18,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Convert visitors into users and upsell Free users to Pro via Lemon Squeezy license key flow
-**Current focus:** Phase 2 - Marketing Sections
+**Current focus:** Phase 3 - Web App Demo & Pro Activation
 
 ## Current Position
 
-Phase: 2 of 3 (Marketing Sections)
-Plan: 2 of 2 in current phase
-Status: In progress
-Last activity: 2026-02-26 -- Completed 02-01-PLAN.md (hero, features, contact sections built)
+Phase: 3 of 3 (Web App Demo & Pro Activation)
+Plan: 0 of TBD in current phase
+Status: Ready to start
+Last activity: 2026-02-26 -- Completed 02-02-PLAN.md (gallery section, screenshot assets, visual checkpoint approved)
 
-Progress: [███░░░░░░░] 25%
+Progress: [██████░░░░] 67%
 
 ## Performance Metrics
 
@@ -49,6 +49,7 @@ Progress: [███░░░░░░░] 25%
 
 *Updated after each plan completion*
 | Phase 02-marketing-sections P02 | 1 | 1 tasks | 1 files |
+| Phase 02-marketing-sections P02 | 15 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -67,6 +68,9 @@ Recent decisions affecting current work:
 - [02-01] Google Play and MS Store badge links contain TODO comments with placeholder IDs for future replacement
 - [Phase 02-02]: Phone screenshots displayed flat with rounded corners and shadow — no CSS device frames per user decision
 - [Phase 02-02]: HTML5 video includes all 4 mobile autoplay attributes: autoplay muted loop playsinline
+- [Phase 02-02]: Phone screenshots displayed flat with rounded-2xl shadow-lg — no CSS device frames per user visual verification decision
+- [Phase 02-02]: Gallery updated from 8 to 7 screenshots to match available asset files — auto-fixed during execution
+- [Phase 02-02]: HTML5 video requires all 4 mobile autoplay attributes: autoplay muted loop playsinline — missing any one breaks mobile
 
 ### Pending Todos
 
@@ -74,12 +78,13 @@ None yet.
 
 ### Blockers/Concerns
 
-- Phase 2: Screenshot asset files (phone + desktop) must exist before gallery section can be built. Prepare in parallel with Phase 1.
 - Phase 3: Lemon Squeezy CORS behavior is MEDIUM confidence -- test empirically before finalizing activation flow. Fallback is Cloudflare Worker proxy.
-- Phase 2: App store listing URLs needed for badge deep links (Google Play package name, Microsoft Store app ID).
+- Phase 2 (deferred): App store listing URLs needed for badge deep links (Google Play package name, Microsoft Store app ID).
+- Phase 2 (deferred): Video files (demo.webm, demo.mp4) need to be added to assets/videos/ before video section is functional.
+- Phase 2 (deferred): Tally.so embed code needed for #tally-form-container before contact section is functional.
 
 ## Session Continuity
 
 Last session: 2026-02-26
-Stopped at: Completed 02-01-PLAN.md — hero, features, and contact sections built
+Stopped at: Completed 02-02-PLAN.md — gallery section built, assets added, visual checkpoint approved; Phase 2 complete
 Resume file: None
