@@ -84,7 +84,7 @@ Deferred to future release. Tracked but not in current roadmap.
 
 | Feature | Reason |
 |---------|--------|
-| Functional audio demo | Requires full app stack (Tone.js, React) — landing page is static only |
+| Functional audio demo | Requires full app stack (Tone.js, React) -- landing page is static only |
 | In-app checkout cart | Breaks static constraint; Lemon Squeezy external checkout is the model |
 | HTML contact form | Tally.so iframe will be pasted in later |
 | Light mode theme | App is dark-only; landing page matches |
@@ -98,42 +98,42 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SEO-01 | — | Pending |
-| SEO-02 | — | Pending |
-| SEO-03 | — | Pending |
-| SEO-04 | — | Pending |
-| SEO-05 | — | Pending |
-| HERO-01 | — | Pending |
-| HERO-02 | — | Pending |
-| HERO-03 | — | Pending |
-| HERO-04 | — | Pending |
-| FEAT-01 | — | Pending |
-| FEAT-02 | — | Pending |
-| GLRY-01 | — | Pending |
-| GLRY-02 | — | Pending |
-| GLRY-03 | — | Pending |
-| GLRY-04 | — | Pending |
-| APP-01 | — | Pending |
-| APP-02 | — | Pending |
-| APP-03 | — | Pending |
-| APP-04 | — | Pending |
-| PRO-01 | — | Pending |
-| PRO-02 | — | Pending |
-| PRO-03 | — | Pending |
-| PRO-04 | — | Pending |
-| PRO-05 | — | Pending |
-| CONT-01 | — | Pending |
-| INFR-01 | — | Pending |
-| INFR-02 | — | Pending |
-| INFR-03 | — | Pending |
-| INFR-04 | — | Pending |
-| INFR-05 | — | Pending |
+| SEO-01 | Phase 1 | Pending |
+| SEO-02 | Phase 1 | Pending |
+| SEO-03 | Phase 1 | Pending |
+| SEO-04 | Phase 1 | Pending |
+| SEO-05 | Phase 1 | Pending |
+| HERO-01 | Phase 2 | Pending |
+| HERO-02 | Phase 2 | Pending |
+| HERO-03 | Phase 2 | Pending |
+| HERO-04 | Phase 2 | Pending |
+| FEAT-01 | Phase 2 | Pending |
+| FEAT-02 | Phase 2 | Pending |
+| GLRY-01 | Phase 2 | Pending |
+| GLRY-02 | Phase 2 | Pending |
+| GLRY-03 | Phase 2 | Pending |
+| GLRY-04 | Phase 2 | Pending |
+| APP-01 | Phase 3 | Pending |
+| APP-02 | Phase 3 | Pending |
+| APP-03 | Phase 3 | Pending |
+| APP-04 | Phase 3 | Pending |
+| PRO-01 | Phase 3 | Pending |
+| PRO-02 | Phase 3 | Pending |
+| PRO-03 | Phase 3 | Pending |
+| PRO-04 | Phase 3 | Pending |
+| PRO-05 | Phase 3 | Pending |
+| CONT-01 | Phase 2 | Pending |
+| INFR-01 | Phase 1 | Pending |
+| INFR-02 | Phase 1 | Pending |
+| INFR-03 | Phase 1 | Pending |
+| INFR-04 | Phase 1 | Pending |
+| INFR-05 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 30 total
-- Mapped to phases: 0
-- Unmapped: 30 ⚠️
+- Mapped to phases: 30
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-26*
-*Last updated: 2026-02-26 after initial definition*
+*Last updated: 2026-02-26 after roadmap creation*
