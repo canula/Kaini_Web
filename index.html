@@ -28,7 +28,7 @@
     <!-- Google Fonts — Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- JSON-LD SoftwareApplication Schema -->
     <script type="application/ld+json">
@@ -70,15 +70,17 @@
 
     <!-- Sticky Navigation Bar -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-nav/90 backdrop-blur-sm border-b border-white/10">
-      <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <!-- Brand -->
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
+        <!-- Brand (left) -->
         <a href="#" class="flex items-center gap-3">
           <img src="assets/images/kaini-logo.svg" alt="Kaini Logo" class="h-4 w-auto" />
-          <div>
-            <img src="assets/images/tc01-logo.png" alt="TC-01" class="h-6 w-auto" />
-            <span class="text-heading text-sm ml-1 hidden sm:inline">Tone Calculator</span>
-          </div>
         </a>
+
+        <!-- TC-01 Logo + Tone Calculator (center) -->
+        <div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
+          <img src="assets/images/tc01-logo.webp" alt="TC-01" class="h-9 w-auto" />
+          <span class="text-sm hidden sm:inline" style="font-family: 'Audiowide', cursive; color: #f97316;">Tone Calculator</span>
+        </div>
 
         <!-- Desktop nav links (hidden on mobile) -->
         <div class="hidden md:flex items-center gap-8">
@@ -147,7 +149,11 @@
     <section id="features" class="bg-surface py-24">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-heading text-center mb-4">Features</h2>
-        <p class="text-body text-center mb-12">Everything you need to create melodies your way.</p>
+        <p class="text-body text-center mb-20">Everything you need to create melodies your way.</p>
+
+        <div class="flex justify-center mb-16">
+          <img src="assets/images/screenshots/DesktopMainUI.png" alt="TC-01 desktop main interface" class="w-3/4 rounded-2xl shadow-lg" />
+        </div>
 
         <!-- Row 1: Record Voice — text left, image right -->
         <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
@@ -161,7 +167,7 @@
             <p class="text-body">Hum a melody and TC-01 transcribes it into notes instantly. No keyboard, no theory — just sing what's in your head.</p>
           </div>
           <div class="flex justify-center">
-            <img src="assets/images/screenshots/desktop-01.png" alt="TC-01 desktop interface showing voice recording" class="w-full rounded-2xl shadow-lg" />
+            <img src="assets/images/screenshots/voice.png" alt="TC-01 desktop interface showing voice recording" class="w-full rounded-2xl shadow-lg" />
           </div>
         </div>
 
@@ -177,7 +183,7 @@
             <p class="text-body">Bring in MIDI files from your DAW or other apps. Edit, transform, and build on melodies you've already started.</p>
           </div>
           <div class="flex justify-center">
-            <img src="assets/images/screenshots/phone-02.png" alt="TC-01 MIDI import screen" class="w-48 md:w-56 rounded-2xl shadow-lg" />
+            <img src="assets/images/screenshots/ImportMidi.png" alt="TC-01 MIDI import screen" class="w-48 md:w-56 rounded-2xl shadow-lg" />
           </div>
         </div>
 
@@ -193,12 +199,7 @@
             <p class="text-body">Choose from built-in motion shapes, contour curves, and rhythm patterns. Mix and match presets to discover unexpected melodies.</p>
           </div>
           <div class="flex justify-center">
-            <video autoplay muted loop playsinline
-                   poster="assets/images/screenshots/phone-01.png"
-                   class="w-48 md:w-64 rounded-2xl shadow-lg">
-              <source src="assets/videos/demo.webm" type="video/webm" />
-              <source src="assets/videos/demo.mp4" type="video/mp4" />
-            </video>
+            <img src="assets/images/screenshots/presets.png" alt="TC-01 motion contour rhythm presets" class="w-full rounded-2xl shadow-lg" />
           </div>
         </div>
 
@@ -214,7 +215,7 @@
             <p class="text-body">Generate complete musical phrases with one tap. TC-01 combines your settings into playable melodies — tweak the results or start fresh.</p>
           </div>
           <div class="flex justify-center">
-            <img src="assets/images/screenshots/phone-06.png" alt="TC-01 phrase generation screen" class="w-48 md:w-56 rounded-2xl shadow-lg" />
+            <img src="assets/images/screenshots/Phrase TR-8.png" alt="TC-01 phrase generation screen" class="w-48 md:w-56 rounded-2xl shadow-lg" />
           </div>
         </div>
 
@@ -230,7 +231,7 @@
             <p class="text-body">Go beyond standard tuning. TC-01 supports microtonal scales so you can explore quarter-tones, just intonation, and custom tunings.</p>
           </div>
           <div class="flex justify-center">
-            <img src="assets/images/screenshots/phone-03.png" alt="TC-01 microtonal tuning screen" class="w-48 md:w-56 rounded-2xl shadow-lg" />
+            <img src="assets/images/screenshots/Microtone.png" alt="TC-01 microtonal tuning screen" class="w-full rounded-2xl shadow-lg" />
           </div>
         </div>
 
@@ -246,7 +247,7 @@
             <p class="text-body">See every change you make, note by note. The edit tracker keeps a full history so you can undo, compare, and refine your melodies.</p>
           </div>
           <div class="flex justify-center">
-            <img src="assets/images/screenshots/phone-07.png" alt="TC-01 note editor with shimmer effect" class="w-48 md:w-56 rounded-2xl shadow-lg" />
+            <img src="assets/images/screenshots/NoteEditorWithShimmer.png" alt="TC-01 note editor with shimmer effect" class="w-48 md:w-56 rounded-2xl shadow-lg" />
           </div>
         </div>
 
