@@ -6,7 +6,7 @@
 
     <!-- Primary SEO -->
     <title>Melody Generator App | TC-01 Tone Calculator</title>
-    <meta name="description" content="Generate melodies in seconds — no music theory needed. TC-01 Tone Calculator is a free melody generator app for Android, Windows, and Web. Also your melody creator and song maker app." />
+    <meta name="description" content="Generate inspiring melodies in seconds — no music theory needed. TC-01 Tone Calculator is a free melody generator app for Android, Windows, and Web. Also your melody creator and song maker app." />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://kaini-instruments.com/" />
@@ -76,39 +76,12 @@
           <img src="assets/images/kaini-logo.svg" alt="Kaini Logo" class="h-4 w-auto" />
         </a>
 
-        <!-- TC-01 Logo + Tone Calculator (center) -->
-        <div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
+        <!-- TC-01 Logo + Tone Calculator (right) -->
+        <div class="flex items-center gap-2">
           <img src="assets/images/tc01-logo.webp" alt="TC-01" class="h-9 w-auto" />
           <span class="text-sm hidden sm:inline" style="font-family: 'Audiowide', cursive; color: #f97316;">Tone Calculator</span>
         </div>
-
-        <!-- Desktop nav links (hidden on mobile) -->
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#features" class="text-body hover:text-heading transition-colors">Features</a>
-          <a href="#pricing" class="text-body hover:text-heading transition-colors">Pricing</a>
-          <a href="#contact" class="text-body hover:text-heading transition-colors">Contact</a>
-        </div>
-
-        <!-- Hamburger button (visible on mobile only) -->
-        <button
-          id="nav-toggle"
-          aria-controls="mobile-menu-dropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          class="md:hidden p-2 text-body hover:text-heading transition-colors"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
       </nav>
-
-      <!-- Mobile menu dropdown (hidden by default, toggled by JS) -->
-      <div id="mobile-menu-dropdown" class="hidden md:hidden bg-nav/95 backdrop-blur-sm border-t border-white/10 px-6 py-4 space-y-4">
-        <a href="#features" class="block text-body hover:text-heading transition-colors">Features</a>
-        <a href="#pricing" class="block text-body hover:text-heading transition-colors">Pricing</a>
-        <a href="#contact" class="block text-body hover:text-heading transition-colors">Contact</a>
-      </div>
     </header>
 
     <!-- Hero Section -->
@@ -117,30 +90,22 @@
         <!-- Left column: text + CTAs -->
         <div>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-heading mb-4">
-            Create melodies in seconds. No music degree required.
+            Create inspiring melodies in seconds. 
           </h1>
           <p class="text-lg text-body mb-8 max-w-lg">
-            TC-01 turns your voice, presets, and ideas into melodies instantly. Hum a tune, pick a rhythm, or generate something new — then export to your DAW. Free on Android, Windows, and Web.
+            The TC-01 Tone Calculator turns your ideas into melodies easily. Hum a tune, flip an existing melody, or generate something new — then export to your DAW. Free on Android, Windows, and the Web.
           </p>
           <!-- CTA row -->
           <div class="flex flex-wrap items-center gap-4">
             <a href="https://PLACEHOLDER_APP_URL" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors">
-              Launch Web App
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME" target="_blank" rel="noopener noreferrer">
-              <!-- TODO: Replace YOUR_PACKAGE_NAME with real Google Play package name -->
-              <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" class="h-12" />
-            </a>
-            <a href="https://apps.microsoft.com/detail/PLACEHOLDER" target="_blank" rel="noopener">
-              <!-- TODO: Replace PLACEHOLDER with real MS Store product ID -->
-              <img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" class="h-12" />
+              Launch Web App (Cross Platform)
             </a>
           </div>
         </div>
 
         <!-- Right column: phone mockup -->
         <div class="flex justify-center">
-          <img src="assets/images/screenshots/phone-01.png" alt="TC-01 Melody Generator app screenshot" class="w-64 md:w-72 rounded-2xl shadow-2xl" />
+          <img src="assets/images/screenshots/phone-01.png" alt="TC-01 Melody Generator app screenshot" class="w-64 md:w-72 rounded-2xl shadow-2xl border-2 border-accent" />
         </div>
       </div>
     </section>
@@ -152,7 +117,7 @@
         <p class="text-body text-center mb-20">Everything you need to create melodies your way.</p>
 
         <div class="flex justify-center mb-16">
-          <img src="assets/images/screenshots/DesktopMainUI.png" alt="TC-01 desktop main interface" class="w-3/4 rounded-2xl shadow-lg" />
+          <img src="assets/images/screenshots/DesktopMainUI.png" alt="TC-01 desktop main interface" class="w-3/4 rounded-2xl shadow-lg border-2 border-accent" />
         </div>
 
         <!-- Row 1: Record Voice — text left, image right -->
@@ -164,10 +129,10 @@
               </svg>
               <h3 class="text-xl font-bold text-heading">Record Voice</h3>
             </div>
-            <p class="text-body">Hum a melody and TC-01 transcribes it into notes instantly. No keyboard, no theory — just sing what's in your head.</p>
+            <p class="text-body">Hum a melody or import and audio file and TC-01 transcribes it into notes instantly.</p>
           </div>
           <div class="flex justify-center">
-            <img src="assets/images/screenshots/voice.png" alt="TC-01 desktop interface showing voice recording" class="w-full rounded-2xl shadow-lg" />
+            <img src="assets/images/screenshots/voice.png" alt="TC-01 desktop interface showing voice recording" class="w-full rounded-2xl shadow-lg border-2 border-accent" />
           </div>
         </div>
 
@@ -183,7 +148,7 @@
             <p class="text-body">Bring in MIDI files from your DAW or other apps. Edit, transform, and build on melodies you've already started.</p>
           </div>
           <div class="flex justify-center">
-            <img src="assets/images/screenshots/ImportMidi.png" alt="TC-01 MIDI import screen" class="w-48 md:w-56 rounded-2xl shadow-lg" />
+            <img src="assets/images/screenshots/ImportMidi.png" alt="TC-01 MIDI import screen" class="w-48 md:w-56 rounded-2xl shadow-lg border-2 border-accent" />
           </div>
         </div>
 
@@ -199,7 +164,7 @@
             <p class="text-body">Choose from built-in motion shapes, contour curves, and rhythm patterns. Mix and match presets to discover unexpected melodies.</p>
           </div>
           <div class="flex justify-center">
-            <img src="assets/images/screenshots/presets.png" alt="TC-01 motion contour rhythm presets" class="w-full rounded-2xl shadow-lg" />
+            <img src="assets/images/screenshots/presets.png" alt="TC-01 motion contour rhythm presets" class="w-full rounded-2xl shadow-lg border-2 border-accent" />
           </div>
         </div>
 
@@ -215,7 +180,7 @@
             <p class="text-body">Generate complete musical phrases with one tap. TC-01 combines your settings into playable melodies — tweak the results or start fresh.</p>
           </div>
           <div class="flex justify-center">
-            <img src="assets/images/screenshots/Phrase TR-8.png" alt="TC-01 phrase generation screen" class="w-48 md:w-56 rounded-2xl shadow-lg" />
+            <img src="assets/images/screenshots/Phrase TR-8.png" alt="TC-01 phrase generation screen" class="w-48 md:w-56 rounded-2xl shadow-lg border-2 border-accent" />
           </div>
         </div>
 
@@ -228,10 +193,10 @@
               </svg>
               <h3 class="text-xl font-bold text-heading">Microtonal Support</h3>
             </div>
-            <p class="text-body">Go beyond standard tuning. TC-01 supports microtonal scales so you can explore quarter-tones, just intonation, and custom tunings.</p>
+            <p class="text-body">Go beyond standard tuning. TC-01 include microtonal scales, allowing you to expand the sonic palette of your melodies, into new and exciting territories.</p>
           </div>
           <div class="flex justify-center">
-            <img src="assets/images/screenshots/Microtone.png" alt="TC-01 microtonal tuning screen" class="w-full rounded-2xl shadow-lg" />
+            <img src="assets/images/screenshots/Microtone.png" alt="TC-01 microtonal tuning screen" class="w-full rounded-2xl shadow-lg border-2 border-accent" />
           </div>
         </div>
 
@@ -247,7 +212,7 @@
             <p class="text-body">See every change you make, note by note. The edit tracker keeps a full history so you can undo, compare, and refine your melodies.</p>
           </div>
           <div class="flex justify-center">
-            <img src="assets/images/screenshots/NoteEditorWithShimmer.png" alt="TC-01 note editor with shimmer effect" class="w-48 md:w-56 rounded-2xl shadow-lg" />
+            <img src="assets/images/screenshots/NoteEditorWithShimmer.png" alt="TC-01 note editor with shimmer effect" class="w-48 md:w-56 rounded-2xl shadow-lg border-2 border-accent" />
           </div>
         </div>
 
@@ -337,28 +302,16 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-surface py-24">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-heading mb-4">Get in touch</h2>
-        <p class="text-body mb-10">Questions, feedback, or just want to say hi — we'd love to hear from you.</p>
-        <div id="tally-form-container" class="max-w-lg mx-auto">
-          <!-- Tally.so embed goes here -->
-        </div>
-      </div>
-    </section>
+  
 
     <!-- Footer -->
     <footer class="bg-surface border-t border-white/10 py-12">
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-          <!-- Kaini logo + copyright -->
-          <div class="flex items-center gap-3">
-            <img src="/assets/images/kaini-logo.png" alt="Kaini Instruments Logo" class="h-6 w-auto" />
-            <span class="text-body text-sm">&copy; 2026 Kaini Instruments. All rights reserved.</span>
-          </div>
+          <span class="text-body text-sm">&copy; 2026 Kaini Instruments Ltd. All rights reserved.</span>
           <!-- Legal links -->
           <div class="flex gap-6">
+            <a href="#contact" class="text-body text-sm hover:text-heading transition-colors">Contact</a>
             <a href="#" class="text-body text-sm hover:text-heading transition-colors">Privacy Policy</a>
             <a href="#" class="text-body text-sm hover:text-heading transition-colors">Terms of Service</a>
           </div>
