@@ -103,7 +103,7 @@
             <li>Failure to read the feature descriptions before purchasing</li>
             <li>Incompatibility with unsupported platforms or browsers</li>
           </ul>
-          <p class="mt-2">To request a refund, contact <a href="mailto:support@kaini-instruments.com" class="text-accent hover:text-accent-hover underline">support@kaini-instruments.com</a> with your order number and a description of the issue. Upon refund, your license key will be deactivated.</p>
+          <p class="mt-2">To request a refund, <button id="refund-open" class="text-accent hover:text-accent-hover underline cursor-pointer">submit a refund request</button> with your order number and a description of the issue. Upon refund, your license key will be deactivated.</p>
         </section>
 
         <section>
@@ -149,7 +149,7 @@
         <section>
           <h2 class="text-lg font-semibold text-heading mb-3">12. Contact</h2>
           <p>If you have questions about these Terms, contact us at:</p>
-          <p class="mt-2"><a href="mailto:support@kaini-instruments.com" class="text-accent hover:text-accent-hover underline">support@kaini-instruments.com</a></p>
+          <p class="mt-2"><button onclick="document.getElementById('contact-open').click()" class="text-accent hover:text-accent-hover underline cursor-pointer">support@kaini-instruments.com</button></p>
         </section>
 
       </div>
@@ -199,13 +199,59 @@
         </form>
       </div>
     </div>
+    <!-- Refund Modal -->
+    <div id="refund-modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/60 backdrop-blur-sm">
+      <div class="bg-surface-alt border border-white/10 rounded-2xl shadow-2xl w-full max-w-md mx-4 p-8 relative">
+        <button id="refund-close" class="absolute top-4 right-4 text-body hover:text-heading transition-colors cursor-pointer">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+        </button>
+        <h2 class="text-2xl font-bold text-heading mb-1">Request a Refund</h2>
+        <p class="text-body text-sm mb-6">Please provide your order details below.</p>
+        <form action="https://formsubmit.co/support@kaini-instruments.com" method="POST">
+          <input type="hidden" name="_subject" value="Refund request from kaini-instruments.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://kaini-instruments.com/terms">
+          <input type="text" name="_honey" style="display:none">
+          <div class="mb-4">
+            <label for="refund-name" class="block text-body text-sm mb-1">Name</label>
+            <input id="refund-name" name="name" type="text" required class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2.5 text-heading text-sm placeholder-body/50 focus:outline-none focus:border-accent transition-colors" placeholder="Your name">
+          </div>
+          <div class="mb-4">
+            <label for="refund-email" class="block text-body text-sm mb-1">Email</label>
+            <input id="refund-email" name="email" type="email" required class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2.5 text-heading text-sm placeholder-body/50 focus:outline-none focus:border-accent transition-colors" placeholder="Email used for purchase">
+          </div>
+          <div class="mb-4">
+            <label for="refund-order" class="block text-body text-sm mb-1">Order Number</label>
+            <input id="refund-order" name="order_number" type="text" required class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2.5 text-heading text-sm placeholder-body/50 focus:outline-none focus:border-accent transition-colors" placeholder="e.g. #12345">
+          </div>
+          <div class="mb-6">
+            <label for="refund-reason" class="block text-body text-sm mb-1">Reason for Refund</label>
+            <textarea id="refund-reason" name="reason" rows="4" required class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2.5 text-heading text-sm placeholder-body/50 focus:outline-none focus:border-accent transition-colors resize-none" placeholder="Describe the issue you're experiencing"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors cursor-pointer">Submit Refund Request</button>
+        </form>
+      </div>
+    </div>
+
     <script>
       const contactModal = document.getElementById('contact-modal');
+      const refundModal = document.getElementById('refund-modal');
+
       document.getElementById('contact-open').addEventListener('click', () => { contactModal.classList.remove('hidden'); contactModal.classList.add('flex'); });
+      document.getElementById('refund-open').addEventListener('click', () => { refundModal.classList.remove('hidden'); refundModal.classList.add('flex'); });
+
       function closeContactModal() { contactModal.classList.add('hidden'); contactModal.classList.remove('flex'); }
+      function closeRefundModal() { refundModal.classList.add('hidden'); refundModal.classList.remove('flex'); }
+
       document.getElementById('contact-close').addEventListener('click', closeContactModal);
+      document.getElementById('refund-close').addEventListener('click', closeRefundModal);
+
       contactModal.addEventListener('click', (e) => { if (e.target === contactModal) closeContactModal(); });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeContactModal(); });
+      refundModal.addEventListener('click', (e) => { if (e.target === refundModal) closeRefundModal(); });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') { closeContactModal(); closeRefundModal(); }
+      });
     </script>
 
   </body>
