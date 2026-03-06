@@ -52,9 +52,6 @@
     }
     </script>
 
-    <!-- Tally Form Popup -->
-    <script async src="https://tally.so/widgets/embed.js"></script>
-
     <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
@@ -326,13 +323,73 @@
           <span class="text-body text-sm">&copy; 2026 Kaini Instruments Ltd. All rights reserved.</span>
           <!-- Legal links -->
           <div class="flex gap-6">
-            <button data-tally-open="Ek1zqL" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" class="text-body text-sm hover:text-heading transition-colors cursor-pointer">Contact</button>
+            <button id="contact-open" class="text-body text-sm hover:text-heading transition-colors cursor-pointer">Contact</button>
             <a href="/privacy" class="text-body text-sm hover:text-heading transition-colors">Privacy Policy</a>
             <a href="/terms" class="text-body text-sm hover:text-heading transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/60 backdrop-blur-sm">
+      <div class="bg-surface-alt border border-white/10 rounded-2xl shadow-2xl w-full max-w-md mx-4 p-8 relative">
+        <button id="contact-close" class="absolute top-4 right-4 text-body hover:text-heading transition-colors cursor-pointer">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+        </button>
+        <h2 class="text-2xl font-bold text-heading mb-1">Get in touch</h2>
+        <p class="text-body text-sm mb-6">We'd love to hear from you.</p>
+        <form id="contact-form" action="https://formsubmit.co/support@kaini-instruments.com" method="POST">
+          <input type="hidden" name="_subject" value="New contact from kaini-instruments.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://kaini-instruments.com/">
+          <input type="text" name="_honey" style="display:none">
+          <div class="mb-4">
+            <label for="contact-name" class="block text-body text-sm mb-1">Name</label>
+            <input id="contact-name" name="name" type="text" required
+              class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2.5 text-heading text-sm placeholder-body/50 focus:outline-none focus:border-accent transition-colors" placeholder="Your name">
+          </div>
+          <div class="mb-4">
+            <label for="contact-email" class="block text-body text-sm mb-1">Email</label>
+            <input id="contact-email" name="email" type="email" required
+              class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2.5 text-heading text-sm placeholder-body/50 focus:outline-none focus:border-accent transition-colors" placeholder="you@example.com">
+          </div>
+          <div class="mb-6">
+            <label for="contact-message" class="block text-body text-sm mb-1">Message</label>
+            <textarea id="contact-message" name="message" rows="4" required
+              class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2.5 text-heading text-sm placeholder-body/50 focus:outline-none focus:border-accent transition-colors resize-none" placeholder="How can we help?"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors cursor-pointer">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contact Modal Toggle -->
+    <script>
+      const contactModal = document.getElementById('contact-modal');
+      const contactOpen = document.getElementById('contact-open');
+      const contactClose = document.getElementById('contact-close');
+
+      contactOpen.addEventListener('click', () => {
+        contactModal.classList.remove('hidden');
+        contactModal.classList.add('flex');
+      });
+
+      function closeContactModal() {
+        contactModal.classList.add('hidden');
+        contactModal.classList.remove('flex');
+      }
+
+      contactClose.addEventListener('click', closeContactModal);
+      contactModal.addEventListener('click', (e) => {
+        if (e.target === contactModal) closeContactModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeContactModal();
+      });
+    </script>
 
     <!-- Vanilla JS Hamburger Toggle -->
     <script>
