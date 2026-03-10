@@ -127,36 +127,23 @@
           <!-- 1. Getting Started -->
           <section id="getting-started">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Getting Started</h2>
-            <p class="mb-4">TC-01 Tone Calculator is an algorithmic melody generator available as a free web app, Android app, and desktop application. It turns your ideas into melodies — no music theory knowledge required.</p>
+            <p class="mb-4">TC-01 Tone Calculator is an algorithmic melody generator available as a free web app, Android app, and desktop application. It generates melodies by combining eight independent musical parameters — key, scale, intervallic motion, contour, rhythm, ornamentation, instrument, and phrase structure — each controlled through a dedicated transform (TR1–TR8).</p>
 
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div class="bg-surface-alt rounded-lg p-4 border border-white/10">
-                <h3 class="font-semibold text-heading mb-2">Novice Music Makers</h3>
-                <p class="text-body mb-2">Explore the fundamental elements that make a melody work:</p>
-                <ul class="space-y-1 text-body">
-                  <li>- How do different scales create different moods?</li>
-                  <li>- What makes a melody move (intervals, contour, rhythm)?</li>
-                  <li>- How do ornaments add expression?</li>
-                  <li>- What creates musical structure and cohesion?</li>
-                </ul>
-                <p class="mt-2 text-xs text-body/70">TC-01 lets you experiment with each element independently, building your musical intuition through hands-on exploration.</p>
-              </div>
-              <div class="bg-surface-alt rounded-lg p-4 border border-white/10">
-                <h3 class="font-semibold text-heading mb-2">Experienced Music Makers</h3>
-                <p class="text-body mb-2">Quickly explore new musical possibilities and break out of patterns:</p>
-                <ul class="space-y-1 text-body">
-                  <li>- Generate fresh melodic ideas instantly</li>
-                  <li>- Explore unfamiliar scales, modes, and rhythmic patterns</li>
-                  <li>- Discover unexpected combinations</li>
-                  <li>- Overcome creative blocks with algorithmic inspiration</li>
-                  <li>- Rapidly prototype musical concepts</li>
-                </ul>
-              </div>
+            <div class="bg-surface-alt rounded-lg p-4 border border-white/10 mb-4">
+              <h3 class="font-semibold text-heading mb-2">Core Capabilities</h3>
+              <ul class="space-y-1 text-body">
+                <li>- Generate melodies across any key, scale, or mode with configurable interval and contour behaviour</li>
+                <li>- Build 8-bar phrases automatically using compositional form templates (ABA, AABA, Rondo, etc.)</li>
+                <li>- Import MIDI files or record vocals for pitch-detected fragment extraction</li>
+                <li>- Edit individual notes in a tracker-style editor <span class="text-accent text-xs font-medium">Pro</span></li>
+                <li>- Export to MIDI, WAV, or the native .kai preset format <span class="text-accent text-xs font-medium">Pro</span></li>
+                <li>- Organize compositions into named sections with independent bar configurations</li>
+              </ul>
             </div>
 
-            <div class="mt-6 bg-surface-alt rounded-lg p-4 border-l-4 border-accent">
-              <p class="text-heading font-medium mb-1">Two Ways to Create</p>
-              <p class="text-body"><strong class="text-heading">Phrase Mode</strong> generates complete 8-bar compositions from professional templates. <strong class="text-heading">Free Mode</strong> lets you build bar-by-bar with full creative control. Both modes are covered in detail below.</p>
+            <div class="bg-surface-alt rounded-lg p-4 border-l-4 border-accent">
+              <p class="text-heading font-medium mb-1">Two Composition Modes</p>
+              <p class="text-body"><strong class="text-heading">Phrase Mode</strong> uses Bar 1 and Bar 2 as seed material, then applies a form template and five development parameters to generate Bars 3–8 automatically. <strong class="text-heading">Free Mode</strong> provides direct control over every transform in every bar, allowing fully manual composition. Both modes are documented in detail below.</p>
             </div>
           </section>
 
@@ -232,136 +219,126 @@
           <!-- 3. Phrase Mode -->
           <section id="phrase-mode">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Phrase Mode</h2>
-            <p class="mb-4">Phrase Mode generates complete 8-bar musical compositions based on professional compositional templates. Perfect for quick inspiration or learning phrase structure.</p>
+            <p class="mb-4">Phrase Mode generates complete 8-bar compositions from two bars of seed material. It takes Bar 1 and Bar 2 as input, applies a compositional form template (ABA, AABA, Rondo, etc.), and algorithmically generates Bars 3–8 based on five development parameters. The result is a structurally coherent phrase that follows established compositional conventions.</p>
 
-            <h3 class="text-lg font-semibold text-heading mb-3">Create an 8-Bar Composition in 4 Clicks</h3>
+            <h3 class="text-lg font-semibold text-heading mb-3">How It Works</h3>
             <ol class="space-y-3 mb-6">
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">1.</span>
-                <div><strong class="text-heading">Enable Phrase Mode</strong> — Toggle in the transport bar (dual-purpose button: shows "Phrase" when Select is off). Activates the Phrase Mode generation system.</div>
+                <div><strong class="text-heading">Enable Phrase Mode</strong> — Toggle in the transport bar (dual-purpose button: shows "Phrase" when Select Mode is off). This activates TR8 and locks Bars 3–8 to algorithmic generation.</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">2.</span>
-                <div><strong class="text-heading">Click TR-8</strong> (Phrase Transform) — Opens the Phrase Mode modal with 100+ presets.</div>
+                <div><strong class="text-heading">Open TR8</strong> (Phrase Transform) — Opens the Phrase Mode modal containing 100+ presets and five development sliders.</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">3.</span>
-                <div><strong class="text-heading">Select a Preset</strong> — Choose from genres: Classical, Jazz, World, Electronic, Experimental. Examples: "Baroque Dance", "Bebop Lines", "Gamelan", "Ambient Drift".</div>
+                <div><strong class="text-heading">Select a Preset</strong> — Each preset defines a form template, slider defaults, and recommended scale/motion settings. Selecting a preset populates Bar 1, Bar 2, and all five sliders. You can then override Bar 2 or adjust any slider before generating.</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">4.</span>
-                <div><strong class="text-heading">Press Play</strong> — Listen to your 8-bar composition.</div>
+                <div><strong class="text-heading">Press Play</strong> — The algorithm generates Bars 3–8 from the seed material and plays the full 8-bar phrase.</div>
               </li>
             </ol>
 
-            <details>
-              <summary class="flex items-center gap-2 text-heading font-medium cursor-pointer hover:text-accent transition-colors">
-                <svg class="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-                Refining Your Phrase (Advanced Sliders)
-              </summary>
-              <div class="details-content mt-3 ml-6 space-y-4">
-                <div>
-                  <p class="font-medium text-heading mb-2">Advanced Sliders (in TR-8 modal):</p>
-                  <ul class="space-y-1 text-body">
-                    <li>- <strong class="text-heading">Motivic Return:</strong> How often Bar 1's idea comes back</li>
-                    <li>- <strong class="text-heading">Development Intensity:</strong> How much variation in middle sections</li>
-                    <li>- <strong class="text-heading">Energy Direction:</strong> Build up or wind down</li>
-                    <li>- <strong class="text-heading">Resolution Strength:</strong> How definitively it ends</li>
-                    <li>- <strong class="text-heading">Harmonic Motion:</strong> How much key/scale changes</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="font-medium text-heading mb-2">Or Edit in Main UI:</p>
-                  <ul class="space-y-1 text-body">
-                    <li>- Bars 1 &amp; 2 are editable</li>
-                    <li>- Changes affect how the phrase develops across all 8 bars</li>
-                  </ul>
-                </div>
-                <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent">
-                  <strong class="text-accent">Tip:</strong> Phrase Mode presets override Bars 1-2, so start with a preset FIRST, then customize Bar 2 for variation.
-                </div>
+            <h3 class="text-lg font-semibold text-heading mb-3">Development Parameters</h3>
+            <p class="text-body mb-3">These five sliders in the TR8 modal control how the algorithm develops seed material across Bars 3–8:</p>
+            <div class="space-y-3 mb-6">
+              <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
+                <p class="font-medium text-heading text-xs">Motivic Return</p>
+                <p class="text-body text-xs">Controls how frequently the Bar 1 motif recurs in later bars. Low values produce more new material in each bar. High values create frequent callbacks to the opening idea, reinforcing thematic unity.</p>
               </div>
-            </details>
+              <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
+                <p class="font-medium text-heading text-xs">Development Intensity</p>
+                <p class="text-body text-xs">Degree of variation applied to middle bars (typically Bars 3–6). Low values make subtle changes — minor rhythmic displacement, small intervallic shifts. High values apply significant rhythmic and intervallic transformation to the source material.</p>
+              </div>
+              <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
+                <p class="font-medium text-heading text-xs">Energy Direction</p>
+                <p class="text-body text-xs">Shapes the dynamic arc of the phrase. "Build" creates progressively more active material (increasing note density, wider intervals, higher register). "Wind Down" does the inverse — progressively less active material toward Bar 8.</p>
+              </div>
+              <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
+                <p class="font-medium text-heading text-xs">Resolution Strength</p>
+                <p class="text-body text-xs">Determines how definitively the phrase concludes at Bar 8. Low values leave the ending open — unresolved intervals, sustained motion. High values produce strong cadential resolution — stepwise motion to the tonic, rhythmic deceleration.</p>
+              </div>
+              <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
+                <p class="font-medium text-heading text-xs">Harmonic Motion</p>
+                <p class="text-body text-xs">Degree of key and scale modulation across the 8 bars. Low values keep the entire phrase in the original key. High values introduce modulation to related keys in the middle bars before returning for resolution.</p>
+              </div>
+            </div>
+
+            <h3 class="text-lg font-semibold text-heading mb-3">Editing Seed Material</h3>
+            <p class="text-body mb-3">Bar 1 and Bar 2 remain fully editable in the main UI while Phrase Mode is active. Any changes to their transform settings (key, scale, motion, contour, rhythm, instrument) are reflected in the generated output. Presets populate both bars on selection, so select a preset first, then customise Bar 2 to introduce variation in the seed material.</p>
           </section>
 
           <!-- 4. Free Mode -->
           <section id="free-mode">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Free Mode</h2>
-            <p class="mb-4">Free Mode gives you full manual control to build melodies bar-by-bar. Perfect for detailed composition and experimentation.</p>
+            <p class="mb-4">Free Mode provides direct control over all transform parameters in every bar. Each bar is configured independently, and TR8 (Phrase) is disabled. This is the default composition mode.</p>
 
-            <h3 class="text-lg font-semibold text-heading mb-3">Build a Melody from Scratch</h3>
+            <h3 class="text-lg font-semibold text-heading mb-3">Workflow</h3>
             <ol class="space-y-3 mb-6">
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">1.</span>
-                <div><strong class="text-heading">Start with Bar 1</strong> — Bar 1 is active by default (click to select if needed).</div>
+                <div><strong class="text-heading">Select Bar 1</strong> — Bar 1 is active and selected by default.</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">2.</span>
                 <div>
-                  <strong class="text-heading">Create Your Foundation Settings:</strong>
+                  <strong class="text-heading">Configure transforms:</strong>
                   <ul class="mt-1 space-y-1 text-body">
-                    <li>- TR1 (Key): Choose tonal center (e.g., C)</li>
-                    <li>- TR2 (Scale): Pick a scale (e.g., Major)</li>
-                    <li>- TR3 (Motion): Set interval style (e.g., Stepwise)</li>
-                    <li>- TR4 (Contour): Choose melodic shape (e.g., Arch)</li>
-                    <li>- TR5 (Rhythm): Select rhythm pattern</li>
-                    <li>- TR7 (Instrument): Pick sound + audio settings</li>
+                    <li>- TR1 (Key): Set the tonal centre</li>
+                    <li>- TR2 (Scale): Define the available pitch set</li>
+                    <li>- TR3 (Motion): Set the interval distribution (Stepwise, Skip, Leap, Mixed)</li>
+                    <li>- TR4 (Contour): Set the melodic direction (Rising, Falling, Arch, Valley, Plateau)</li>
+                    <li>- TR5 (Rhythm): Select or build a duration pattern</li>
+                    <li>- TR7 (Instrument): Choose sound source and audio parameters</li>
                   </ul>
                 </div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">3.</span>
-                <div><strong class="text-heading">Copy Bar 1 to Bar 2</strong> — Drag Bar 1 onto Bar 2 to copy all transform settings (or manually configure Bar 2).</div>
+                <div><strong class="text-heading">Duplicate to Bar 2</strong> — Drag Bar 1 onto Bar 2 to copy all transform settings. This creates an identical bar that can be modified selectively.</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">4.</span>
-                <div><strong class="text-heading">Tweak a Setting in Bar 2</strong> — Change Motion from "Stepwise" to "Skip", or Contour from "Arch" to "Valley". This creates variation while maintaining coherence.</div>
+                <div><strong class="text-heading">Modify Bar 2</strong> — Change one or two parameters (e.g., switch Motion from Stepwise to Skip, or Contour from Arch to Valley) to create variation while retaining shared characteristics.</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">5.</span>
-                <div><strong class="text-heading">Press Play</strong> — Listen to your 2-bar melody, then continue building.</div>
+                <div><strong class="text-heading">Play and extend</strong> — Listen to the result, then continue adding bars. Each bar can share settings with previous bars or diverge entirely.</div>
               </li>
             </ol>
 
             <details>
               <summary class="flex items-center gap-2 text-heading font-medium cursor-pointer hover:text-accent transition-colors">
                 <svg class="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-                Bar Building Techniques
+                Composition Patterns
               </summary>
               <div class="details-content mt-3 ml-6 space-y-5">
                 <div>
                   <p class="font-medium text-heading mb-2">Call-and-Response (2 Bars)</p>
                   <ul class="space-y-1 text-body">
-                    <li>- Bar 1: "Question" — Piano, Rising contour, Stepwise motion</li>
-                    <li>- Bar 2: "Answer" — Piano, Falling contour, Skip motion</li>
+                    <li>- Bar 1: Rising contour, Stepwise motion — establishes a melodic idea with ascending tension</li>
+                    <li>- Bar 2: Falling contour, Skip motion — responds with descending resolution and wider intervals</li>
                   </ul>
-                  <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent mt-2 text-xs">
-                    <strong class="text-accent">Music Theory:</strong> Call-and-response creates tension and release. The "call" poses a musical question, the "response" provides an answer.
-                  </div>
                 </div>
                 <div>
                   <p class="font-medium text-heading mb-2">Motivic Development (4 Bars)</p>
                   <ul class="space-y-1 text-body">
-                    <li>- Bar 1: Original idea (C Major, Arch contour, Stepwise)</li>
-                    <li>- Bar 2: Same key/scale, different rhythm</li>
-                    <li>- Bar 3: Same rhythm as Bar 2, different contour</li>
-                    <li>- Bar 4: Return to Bar 1's rhythm, new key (G Major)</li>
+                    <li>- Bar 1: Original motif (e.g., C Major, Arch contour, Stepwise)</li>
+                    <li>- Bar 2: Same key/scale, different rhythm — rhythmic variation of the motif</li>
+                    <li>- Bar 3: Same rhythm as Bar 2, different contour — contour variation</li>
+                    <li>- Bar 4: Return to Bar 1's rhythm in a new key (e.g., G Major) — transposed recapitulation</li>
                   </ul>
-                  <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent mt-2 text-xs">
-                    <strong class="text-accent">Music Theory:</strong> Repetition creates familiarity, variation creates interest. This balance is the essence of memorable melodies.
-                  </div>
                 </div>
                 <div>
-                  <p class="font-medium text-heading mb-2">Contour Conversations</p>
+                  <p class="font-medium text-heading mb-2">Contour Sequencing (4 Bars)</p>
                   <ul class="space-y-1 text-body">
-                    <li>- Bar 1: Rising contour — builds energy</li>
-                    <li>- Bar 2: Falling contour — releases energy</li>
-                    <li>- Bar 3: Arch contour — rises and falls (self-contained)</li>
-                    <li>- Bar 4: Plateau — provides stability/rest</li>
+                    <li>- Bar 1: Rising — ascending pitch trajectory</li>
+                    <li>- Bar 2: Falling — descending pitch trajectory</li>
+                    <li>- Bar 3: Arch — ascent followed by descent within a single bar</li>
+                    <li>- Bar 4: Plateau — minimal pitch variation, rhythmic interest</li>
                   </ul>
-                  <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent mt-2 text-xs">
-                    <strong class="text-accent">Music Theory:</strong> Rising = anticipation, Falling = resolution, Arch = complete gesture, Plateau = contemplation.
-                  </div>
                 </div>
               </div>
             </details>
@@ -370,75 +347,59 @@
           <!-- 5. The Bar System -->
           <section id="bar-system">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">The Bar System</h2>
-            <p class="mb-4">TC-01 operates on an 8-bar structure per section. Each bar can be in one of four states:</p>
+            <p class="mb-4">Each section contains 8 bars. Every bar holds an independent set of transform settings (TR1–TR7) and can be in one of four states:</p>
 
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
               <div class="bg-surface-alt rounded-lg p-3 border border-white/10 text-center">
                 <div class="w-6 h-6 rounded bg-zinc-300 mx-auto mb-2"></div>
                 <p class="text-heading font-medium text-xs">Active</p>
-                <p class="text-body text-xs">Plays back</p>
+                <p class="text-body text-xs">Included in playback</p>
               </div>
               <div class="bg-surface-alt rounded-lg p-3 border border-white/10 text-center">
                 <div class="w-6 h-6 rounded bg-zinc-700 mx-auto mb-2"></div>
                 <p class="text-heading font-medium text-xs">Inactive</p>
-                <p class="text-body text-xs">Stored, muted</p>
+                <p class="text-body text-xs">Settings retained, excluded from playback</p>
               </div>
               <div class="bg-surface-alt rounded-lg p-3 border border-white/10 text-center">
                 <div class="w-6 h-6 rounded bg-orange-500 mx-auto mb-2"></div>
                 <p class="text-heading font-medium text-xs">Selected</p>
-                <p class="text-body text-xs">Being edited</p>
+                <p class="text-body text-xs">Currently targeted for editing</p>
               </div>
               <div class="bg-surface-alt rounded-lg p-3 border border-white/10 text-center">
                 <div class="w-6 h-6 rounded bg-green-500 mx-auto mb-2"></div>
                 <p class="text-heading font-medium text-xs">Playing</p>
-                <p class="text-body text-xs">Live playback</p>
+                <p class="text-body text-xs">Currently sounding during playback</p>
               </div>
             </div>
 
-            <h3 class="text-lg font-semibold text-heading mb-2">Working with Bars</h3>
+            <h3 class="text-lg font-semibold text-heading mb-2">Bar Operations</h3>
             <ul class="space-y-2 mb-4">
-              <li><strong class="text-heading">Tap/Click bar</strong> — Select and view its transforms</li>
-              <li><strong class="text-heading">Drag bar to another bar</strong> — Copy all transforms to target bar</li>
-              <li><strong class="text-heading">Drag bar outside the grid</strong> — Bin icon appears with red flash; release to delete</li>
+              <li><strong class="text-heading">Tap/Click a bar</strong> — Selects it. Opening any TR modal now edits that bar's settings.</li>
+              <li><strong class="text-heading">Drag a bar onto another bar</strong> — Copies all transform settings (TR1–TR7) from the source bar to the target. The target bar's previous settings are overwritten. The source bar is unchanged.</li>
+              <li><strong class="text-heading">Drag a bar outside the grid</strong> — A bin icon appears with a red flash. Releasing the drag deletes the bar's settings and sets it to inactive.</li>
             </ul>
 
             <h3 class="text-lg font-semibold text-heading mb-2">Playback Rules</h3>
             <ul class="space-y-1 text-body">
-              <li>- If no bars are marked (shifted): Plays from Bar 1 to last active bar</li>
-              <li>- If bars are marked (orange border): Plays only marked bars</li>
-              <li>- Each bar has independent transform settings</li>
+              <li>- Default: Plays sequentially from Bar 1 through the last active bar in the section</li>
+              <li>- With marked bars (Select Mode): Only bars with an orange border participate in playback</li>
+              <li>- Each bar generates its melody independently from its own transform settings</li>
             </ul>
           </section>
 
           <!-- 6. The Section Builder -->
           <section id="section-builder">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">The Section Builder</h2>
-            <p class="mb-4">TC-01's Section Builder lets you organize 8-bar segments into larger structures — think of sections as building blocks for complete songs.</p>
+            <p class="mb-4">Sections are 8-bar containers that play sequentially in the order they appear in the carousel. Each section holds its own set of bar configurations and can be named for organisational clarity (e.g., "Verse", "Chorus", "Bridge").</p>
 
             <div class="mb-4">
               <p class="font-medium text-heading mb-2">Each section contains:</p>
               <ul class="space-y-1 text-body">
-                <li>- 8 independent bars (each with its own transform settings)</li>
-                <li>- A unique name (e.g., "Verse", "Chorus", "Bridge")</li>
-                <li>- Independent playback and editing</li>
+                <li>- 8 bars, each with independent transform settings</li>
+                <li>- A user-assignable name</li>
+                <li>- Independent active/inactive state per bar</li>
               </ul>
             </div>
-
-            <details class="mb-3">
-              <summary class="flex items-center gap-2 text-heading font-medium cursor-pointer hover:text-accent transition-colors">
-                <svg class="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-                Building a Song Structure (Example)
-              </summary>
-              <div class="details-content mt-3 ml-6">
-                <ul class="space-y-1 text-body">
-                  <li>- Section 1: Intro (4 bars active)</li>
-                  <li>- Section 2: Verse (8 bars active)</li>
-                  <li>- Section 3: Chorus (8 bars active)</li>
-                  <li>- Section 4: Bridge (8 bars active)</li>
-                  <li>- Section 5: Outro (4 bars active)</li>
-                </ul>
-              </div>
-            </details>
 
             <details class="mb-3">
               <summary class="flex items-center gap-2 text-heading font-medium cursor-pointer hover:text-accent transition-colors">
@@ -449,24 +410,23 @@
                 <div>
                   <p class="font-medium text-heading mb-1">Creating:</p>
                   <ol class="space-y-1 text-body">
-                    <li>1. Click/Tap the "+" button</li>
-                    <li>2. New section appears with default name "Section [number]"</li>
-                    <li>3. Drag section to another section to copy transforms</li>
-                    <li>4. All 8 bars start inactive — click/tap bars to activate them</li>
+                    <li>1. Click/Tap the "+" button in the section carousel</li>
+                    <li>2. A new section appears with a default name ("Section [number]") and all 8 bars inactive</li>
+                    <li>3. Drag one section onto another to copy all bar configurations (all TR1–TR7 settings for all 8 bars)</li>
+                    <li>4. Activate bars individually by clicking/tapping them</li>
                   </ol>
                 </div>
                 <div>
                   <p class="font-medium text-heading mb-1">Renaming:</p>
                   <ol class="space-y-1 text-body">
-                    <li>1. Click/Tap on the section</li>
-                    <li>2. Go to Hamburger Menu &gt; Rename Current Section</li>
-                    <li>3. Enter new name (e.g., "Verse 1", "Chorus A", "Solo")</li>
+                    <li>1. Select the section in the carousel</li>
+                    <li>2. Open Hamburger Menu &gt; Rename Current Section</li>
+                    <li>3. Enter the new name</li>
                   </ol>
                 </div>
                 <div>
                   <p class="font-medium text-heading mb-1">Deleting:</p>
-                  <p class="text-body">Drag section chip outside the carousel area — Bin icon appears with red pulse animation — release to delete.</p>
-                  <p class="text-body text-xs mt-1">Warning: Cannot delete the last active section. Deleted sections cannot be recovered.</p>
+                  <p class="text-body">Drag the section chip outside the carousel area — a bin icon appears with a red pulse — release to delete. The last remaining section cannot be deleted. Deletion is permanent.</p>
                 </div>
               </div>
             </details>
@@ -474,32 +434,18 @@
             <details>
               <summary class="flex items-center gap-2 text-heading font-medium cursor-pointer hover:text-accent transition-colors">
                 <svg class="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-                Navigating &amp; Playing Across Sections
+                Playback Across Sections
               </summary>
               <div class="details-content mt-3 ml-6 space-y-3">
-                <div>
-                  <p class="font-medium text-heading mb-1">Section Carousel:</p>
-                  <ul class="space-y-1 text-body">
-                    <li>- Shows all sections as chips/cards</li>
-                    <li>- Currently selected section highlighted with orange border</li>
-                    <li>- During playback, carousel auto-scrolls to currently playing section (green glow)</li>
-                    <li>- Navigate with chevron buttons (&lt; &gt;) or swipe/scroll</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="font-medium text-heading mb-1">Playback Across Sections:</p>
-                  <ul class="space-y-1 text-body">
-                    <li>- TC-01 plays sections in sequence</li>
-                    <li>- Playback flows through them automatically</li>
-                    <li>- Green glow indicates currently playing section + bar</li>
-                  </ul>
-                </div>
+                <ul class="space-y-1 text-body">
+                  <li>- Sections play in sequential order (left to right in the carousel)</li>
+                  <li>- Playback advances automatically from the last active bar of one section to Bar 1 of the next</li>
+                  <li>- The carousel auto-scrolls to the currently playing section (green glow)</li>
+                  <li>- The currently selected section is highlighted with an orange border</li>
+                  <li>- Navigate between sections using the chevron buttons (&lt; &gt;) or by swiping/scrolling the carousel</li>
+                </ul>
               </div>
             </details>
-
-            <div class="mt-4 bg-surface-alt rounded-lg p-3 border-l-4 border-accent text-xs">
-              <strong class="text-accent">Tips:</strong> Name sections clearly ("Intro", "Verse 1", "Pre-Chorus"). Save often with Ctrl+S. Test individual sections before combining. Build gradually — start with 1-2 sections, get them right, then add more.
-            </div>
           </section>
 
           <!-- 7. Select Mode -->
@@ -535,17 +481,14 @@
               <!-- TR1 -->
               <div class="border-l-2 border-accent/50 pl-4">
                 <h3 class="text-lg font-semibold text-heading mb-2">TR1: Key Transform</h3>
-                <p class="text-body mb-2">Sets the tonal center — the "home note" around which your melody revolves.</p>
+                <p class="text-body mb-2">Sets the tonal centre for the bar. All pitch generation is relative to this root note. Changing the key transposes the entire melodic output while preserving interval relationships.</p>
                 <p class="text-body text-xs mb-3"><strong class="text-heading">Options:</strong> C, C&#9839;/D&#9837;, D, D&#9839;/E&#9837;, E, F, F&#9839;/G&#9837;, G, G&#9839;/A&#9837;, A, A&#9839;/B&#9837;, B</p>
-                <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent text-xs">
-                  <strong class="text-accent">Music Theory:</strong> The key doesn't just determine pitch — it affects the "color" and "feel" of the melody. Different keys suit different instruments and vocal ranges.
-                </div>
               </div>
 
               <!-- TR2 -->
               <div class="border-l-2 border-accent/50 pl-4">
                 <h3 class="text-lg font-semibold text-heading mb-2">TR2: Scale Transform</h3>
-                <p class="text-body mb-3">Defines which notes are available within the chosen key.</p>
+                <p class="text-body mb-3">Defines the pitch set available for melody generation within the selected key. The scale determines which intervals are used and constrains all generated notes to its member pitches.</p>
 
                 <details class="mb-3">
                   <summary class="flex items-center gap-2 text-heading font-medium cursor-pointer hover:text-accent transition-colors text-xs">
@@ -553,10 +496,10 @@
                     Common Scales
                   </summary>
                   <div class="details-content mt-2 ml-6 space-y-1 text-xs text-body">
-                    <p><strong class="text-heading">Major:</strong> Bright, happy, stable (do-re-mi-fa-sol-la-ti-do)</p>
-                    <p><strong class="text-heading">Natural Minor:</strong> Dark, melancholic, introspective</p>
-                    <p><strong class="text-heading">Harmonic Minor:</strong> Exotic, dramatic (raised 7th creates tension)</p>
-                    <p><strong class="text-heading">Melodic Minor:</strong> Smooth ascending, natural descending</p>
+                    <p><strong class="text-heading">Major (Ionian):</strong> 7-note diatonic scale with major 3rd and major 7th. W-W-H-W-W-W-H interval pattern.</p>
+                    <p><strong class="text-heading">Natural Minor (Aeolian):</strong> 7-note diatonic scale with minor 3rd and minor 7th. W-H-W-W-H-W-W interval pattern.</p>
+                    <p><strong class="text-heading">Harmonic Minor:</strong> Natural minor with a raised 7th degree, creating an augmented 2nd between degrees 6 and 7.</p>
+                    <p><strong class="text-heading">Melodic Minor:</strong> Raised 6th and 7th degrees ascending; reverts to natural minor descending.</p>
                   </div>
                 </details>
 
@@ -566,18 +509,14 @@
                     Modes
                   </summary>
                   <div class="details-content mt-2 ml-6 space-y-1 text-xs text-body">
-                    <p><strong class="text-heading">Dorian:</strong> Minor with raised 6th (jazz, folk)</p>
-                    <p><strong class="text-heading">Phrygian:</strong> Minor with lowered 2nd (Spanish, flamenco)</p>
-                    <p><strong class="text-heading">Lydian:</strong> Major with raised 4th (dreamy, floating)</p>
-                    <p><strong class="text-heading">Mixolydian:</strong> Major with lowered 7th (rock, blues, folk)</p>
-                    <p><strong class="text-heading">Aeolian:</strong> Natural minor (sad, contemplative)</p>
-                    <p><strong class="text-heading">Locrian:</strong> Diminished, unstable (rarely used)</p>
+                    <p><strong class="text-heading">Dorian:</strong> Minor mode with a raised 6th degree. Common in jazz and folk idioms.</p>
+                    <p><strong class="text-heading">Phrygian:</strong> Minor mode with a lowered 2nd degree. Characteristic half-step from root.</p>
+                    <p><strong class="text-heading">Lydian:</strong> Major mode with a raised 4th degree. The augmented 4th creates a tritone from root.</p>
+                    <p><strong class="text-heading">Mixolydian:</strong> Major mode with a lowered 7th degree. Dominant-quality scale.</p>
+                    <p><strong class="text-heading">Aeolian:</strong> Identical to natural minor. Minor 3rd, minor 6th, minor 7th.</p>
+                    <p><strong class="text-heading">Locrian:</strong> Diminished mode with a lowered 2nd and 5th. Contains a diminished 5th from root.</p>
                   </div>
                 </details>
-
-                <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent text-xs">
-                  <strong class="text-accent">Music Theory:</strong> Scales constrain your melody to specific intervals, creating coherence. Major = consonance. Minor modes = more dissonance and tension.
-                </div>
               </div>
             </div>
           </section>
@@ -590,57 +529,53 @@
               <!-- TR3 -->
               <div class="border-l-2 border-accent/50 pl-4">
                 <h3 class="text-lg font-semibold text-heading mb-2">TR3: Motion Transform</h3>
-                <p class="text-body mb-3">Controls how notes move — the interval relationships between consecutive notes.</p>
+                <p class="text-body mb-3">Controls the interval distribution between consecutive notes. Each option biases the generator toward a specific interval range while still allowing variation.</p>
 
                 <div class="space-y-2 mb-3">
                   <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
                     <p class="font-medium text-heading text-xs">Stepwise (50%+)</p>
-                    <p class="text-body text-xs">Small intervals — 2nds, 3rds. Smooth, singable, easy to follow.</p>
+                    <p class="text-body text-xs">Biases toward 2nds and 3rds. Over half the intervals will be conjunct (adjacent scale degrees).</p>
                   </div>
                   <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
                     <p class="font-medium text-heading text-xs">Skip (50%+)</p>
-                    <p class="text-body text-xs">Medium leaps — 4ths, 5ths, 6ths. Energetic, interesting, confident.</p>
+                    <p class="text-body text-xs">Biases toward 4ths, 5ths, and 6ths. Produces wider intervallic movement than Stepwise.</p>
                   </div>
                   <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
                     <p class="font-medium text-heading text-xs">Leap (50%+)</p>
-                    <p class="text-body text-xs">Large jumps — 7ths, octaves. Dramatic, attention-grabbing, virtuosic.</p>
+                    <p class="text-body text-xs">Biases toward 7ths, octaves, and wider. Produces angular, disjunct melodic lines.</p>
                   </div>
                   <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
                     <p class="font-medium text-heading text-xs">Mixed</p>
-                    <p class="text-body text-xs">Combination of all types. Balanced, unpredictable, natural speech-like.</p>
+                    <p class="text-body text-xs">No bias — intervals are distributed across the full range. Produces varied, less predictable lines.</p>
                   </div>
-                </div>
-
-                <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent text-xs">
-                  <strong class="text-accent">Music Theory:</strong> Stepwise motion = vocal melodies, lyrical lines. Leaps = instrumental showpieces. Classical rule: After a leap, resolve by step in opposite direction.
                 </div>
               </div>
 
               <!-- TR4 -->
               <div class="border-l-2 border-accent/50 pl-4">
-                <h3 class="text-lg font-semibold text-heading mb-2">TR4: Contour Behavior</h3>
-                <p class="text-body mb-3">Shapes the overall melodic direction and arc.</p>
+                <h3 class="text-lg font-semibold text-heading mb-2">TR4: Contour Transform</h3>
+                <p class="text-body mb-3">Defines the overall pitch trajectory within a bar. The contour constrains the direction of motion while TR3 determines the interval sizes.</p>
 
                 <div class="space-y-2 mb-3">
                   <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
                     <p class="font-medium text-heading text-xs">Rising</p>
-                    <p class="text-body text-xs">Generally ascending — builds tension, energy, anticipation.</p>
+                    <p class="text-body text-xs">Net ascending pitch trajectory across the bar. Intervals are biased upward.</p>
                   </div>
                   <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
                     <p class="font-medium text-heading text-xs">Falling</p>
-                    <p class="text-body text-xs">Generally descending — releases tension, calming, resolving.</p>
+                    <p class="text-body text-xs">Net descending pitch trajectory across the bar. Intervals are biased downward.</p>
                   </div>
                   <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
                     <p class="font-medium text-heading text-xs">Arch</p>
-                    <p class="text-body text-xs">Rise then fall — complete gesture, self-contained phrase.</p>
+                    <p class="text-body text-xs">Ascends in the first half, descends in the second half. Creates a self-contained arc within the bar.</p>
                   </div>
                   <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
                     <p class="font-medium text-heading text-xs">Valley</p>
-                    <p class="text-body text-xs">Fall then rise — sigh, question-answer within single bar.</p>
+                    <p class="text-body text-xs">Descends in the first half, ascends in the second half. Inverse of Arch.</p>
                   </div>
                   <div class="bg-surface-alt rounded-lg p-3 border border-white/10">
                     <p class="font-medium text-heading text-xs">Plateau</p>
-                    <p class="text-body text-xs">Mostly static, small variations — meditative, hypnotic, minimalist.</p>
+                    <p class="text-body text-xs">Minimal pitch variation. Notes remain within a narrow register, with rhythm providing the primary interest.</p>
                   </div>
                 </div>
 
@@ -650,14 +585,10 @@
                     Advanced Contour Features
                   </summary>
                   <div class="details-content mt-2 ml-6 space-y-2 text-xs text-body">
-                    <p><strong class="text-heading">Gravity Points:</strong> Set specific pitch targets that the melody gravitates toward — creates intentional melodic destinations and focal points.</p>
-                    <p><strong class="text-heading">Multi-Bar Contours:</strong> Extend contour shapes across up to 4 bars — creates larger-scale melodic arcs that span multiple bars.</p>
+                    <p><strong class="text-heading">Gravity Points:</strong> Define specific pitch targets within the bar. The generator biases note selection toward these pitches at their specified positions, creating intentional focal points in the melodic line.</p>
+                    <p><strong class="text-heading">Multi-Bar Contours:</strong> Extend a single contour shape across up to 4 consecutive bars. The contour arc spans the full multi-bar range rather than resetting at each bar boundary.</p>
                   </div>
                 </details>
-
-                <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent text-xs">
-                  <strong class="text-accent">Music Theory:</strong> Contour creates the emotional shape of a phrase. Combine with motion: Arch + Stepwise = gentle/lyrical, Rising + Leap = urgent/climactic.
-                </div>
               </div>
             </div>
           </section>
@@ -670,43 +601,36 @@
               <!-- TR5 -->
               <div class="border-l-2 border-accent/50 pl-4">
                 <h3 class="text-lg font-semibold text-heading mb-2">TR5: Rhythm System</h3>
-                <p class="text-body mb-3">Assigns duration patterns and timing to notes.</p>
+                <p class="text-body mb-3">Defines the duration pattern applied to generated notes. Rhythm determines note count, timing, and beat placement independently of pitch.</p>
 
-                <ul class="space-y-1 text-body mb-3">
-                  <li>- <strong class="text-heading">Preset Rhythms:</strong> Pre-defined patterns (quarter notes, eighth notes, syncopation, etc.)</li>
-                  <li>- <strong class="text-heading">Custom Patterns:</strong> Create your own sequences</li>
-                  <li>- <strong class="text-heading">Bar Length (Beats Per Bar):</strong> Choose 2, 3, or 4 beats per bar
+                <ul class="space-y-2 text-body mb-3">
+                  <li>- <strong class="text-heading">Preset Rhythms:</strong> Pre-defined patterns including straight subdivisions (quarter, eighth, sixteenth notes), syncopated patterns (off-beat emphasis), and compound patterns (dotted rhythms, triplets).</li>
+                  <li>- <strong class="text-heading">Custom Pattern Builder:</strong> Construct patterns by toggling individual beat subdivisions on a grid. Each beat can be divided into up to 4 subdivisions. Active subdivisions receive a note; inactive subdivisions are rests or sustains. The resulting pattern is applied cyclically to fill the bar.</li>
+                  <li>- <strong class="text-heading">Bar Length (Beats Per Bar):</strong> Sets the time signature denominator. Options:
                     <ul class="ml-4 mt-1 space-y-0.5 text-xs text-body/70">
-                      <li>2/4 time = March feel (strong-weak)</li>
-                      <li>3/4 time = Waltz feel (strong-weak-weak)</li>
-                      <li>4/4 time = Standard rock/pop (strong-weak-medium-weak)</li>
+                      <li>2 beats per bar (2/4 time)</li>
+                      <li>3 beats per bar (3/4 time)</li>
+                      <li>4 beats per bar (4/4 time)</li>
                     </ul>
+                    Each bar can use a different beat count, allowing polymetre across bars.
                   </li>
-                  <li>- <strong class="text-heading">Anacrusis (Pickup Notes):</strong> Start melody before the first downbeat — creates anticipation and forward momentum</li>
-                  <li>- <strong class="text-heading">Preview:</strong> Hear rhythm with metronome before applying</li>
+                  <li>- <strong class="text-heading">Anacrusis (Pickup Notes):</strong> Places one or more notes before the first downbeat of the bar. The pickup notes occupy time borrowed from the preceding bar's final beat. This shifts the melodic phrase to begin ahead of the barline, creating forward momentum into the downbeat.</li>
+                  <li>- <strong class="text-heading">Preview:</strong> Auditions the rhythm pattern with metronome click before applying it to the bar.</li>
                 </ul>
-
-                <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent text-xs">
-                  <strong class="text-accent">Music Theory:</strong> Rhythm is HALF the melody. Same pitches with different rhythms = completely different songs. Syncopation = energy, surprise.
-                </div>
               </div>
 
               <!-- TR6 -->
               <div class="border-l-2 border-accent/50 pl-4">
                 <h3 class="text-lg font-semibold text-heading mb-2">TR6: Ornamentation</h3>
-                <p class="text-body mb-3">Adds decorative embellishments to individual notes (Baroque-era technique).</p>
+                <p class="text-body mb-3">Applies melodic embellishments to individual notes. Ornaments are inserted at note positions and subdivide the original note's duration to accommodate the additional pitches. Each ornament type has specific rules for when it is applied:</p>
 
-                <ul class="space-y-1 text-body mb-3">
-                  <li>- <strong class="text-heading">Trill:</strong> Rapid alternation with upper neighbor note</li>
-                  <li>- <strong class="text-heading">Mordent:</strong> Quick lower neighbor + return</li>
-                  <li>- <strong class="text-heading">Turn:</strong> Four-note figure circling the main note</li>
-                  <li>- <strong class="text-heading">Appoggiatura:</strong> "Leaning note" that resolves down</li>
-                  <li>- <strong class="text-heading">Grace Note:</strong> Quick preceding ornamental note</li>
+                <ul class="space-y-2 text-body mb-3">
+                  <li>- <strong class="text-heading">Trill:</strong> Rapid alternation between the written note and its upper neighbour (next scale degree). Applied to notes with sufficient duration to accommodate multiple alternations. Subdivides the note into equal-length oscillations.</li>
+                  <li>- <strong class="text-heading">Mordent:</strong> A three-note figure: main note → lower neighbour → main note. Occupies the first portion of the original note's duration, with the remainder sustained on the main pitch.</li>
+                  <li>- <strong class="text-heading">Turn:</strong> A four-note figure that circles the main note: upper neighbour → main note → lower neighbour → main note. Applied to notes long enough for four subdivisions.</li>
+                  <li>- <strong class="text-heading">Appoggiatura:</strong> An accented non-chord tone placed on the beat, resolving stepwise down to the main note. Takes approximately half the original note's duration.</li>
+                  <li>- <strong class="text-heading">Grace Note:</strong> A short, unaccented note preceding the main note. Borrows minimal time from the main note and is played as quickly as possible before the beat.</li>
                 </ul>
-
-                <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent text-xs">
-                  <strong class="text-accent">Music Theory:</strong> Ornaments add expression without changing the underlying melody. Use sparingly on important notes. Overuse = cluttered.
-                </div>
               </div>
             </div>
           </section>
@@ -717,29 +641,25 @@
 
             <div class="border-l-2 border-accent/50 pl-4">
               <h3 class="text-lg font-semibold text-heading mb-2">TR7: Instrument Transform</h3>
-              <p class="text-body mb-3">Selects the sound source and configures audio parameters for the selected bar.</p>
+              <p class="text-body mb-3">Selects the synthesis voice and configures audio parameters for the selected bar. Each bar can use a different instrument, allowing timbral variation across the composition.</p>
 
               <ul class="space-y-1 text-body mb-3">
-                <li>- <strong class="text-heading">Instrument:</strong> Piano, Bass, and more (plus custom instruments with Pro license)</li>
-                <li>- <strong class="text-heading">Octave Shift:</strong> Transpose the bar up or down by octaves</li>
-                <li>- <strong class="text-heading">Volume:</strong> Loudness (0-100%)</li>
-                <li>- <strong class="text-heading">Reverb:</strong> Spatial depth, room size (0-100%)</li>
-                <li>- <strong class="text-heading">Stereo Pan:</strong> Position in stereo field (L = left, C = center, R = right)</li>
+                <li>- <strong class="text-heading">Instrument:</strong> Built-in voices include Piano, Bass, and others. Custom sample-based instruments are available with a Pro license.</li>
+                <li>- <strong class="text-heading">Octave Shift:</strong> Transposes all notes in the bar up or down by whole octaves without changing the key or scale.</li>
+                <li>- <strong class="text-heading">Volume:</strong> Per-bar amplitude level (0–100%).</li>
+                <li>- <strong class="text-heading">Reverb:</strong> Convolution reverb amount (0–100%). Controls the wet/dry mix of the spatial effect.</li>
+                <li>- <strong class="text-heading">Stereo Pan:</strong> Stereo field position. L = hard left, C = centre, R = hard right.</li>
               </ul>
 
               <details class="mb-3">
                 <summary class="flex items-center gap-2 text-heading font-medium cursor-pointer hover:text-accent transition-colors text-xs">
                   <svg class="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-                  Custom Instruments (Pro)
+                  Custom Instruments <span class="text-accent text-xs font-medium ml-1">Pro</span>
                 </summary>
                 <div class="details-content mt-2 ml-6 text-xs text-body">
-                  <p>With a Pro license, you can add your own audio samples as custom instruments. Load any WAV or MP3 file and TC-01 will map it across the pitch range for use in your melodies.</p>
+                  <p>Load any WAV or MP3 file as a custom instrument. TC-01 maps the sample across the pitch range using pitch-shifting, making it available as a playable voice in any bar.</p>
                 </div>
               </details>
-
-              <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent text-xs">
-                <strong class="text-accent">Music Theory:</strong> Timbre (instrument choice) affects mood and genre association. Piano = versatile, percussive attack. Bass = low register, foundational. Different bars can use different instruments for textural variety.
-              </div>
             </div>
           </section>
 
@@ -749,73 +669,61 @@
 
             <div class="border-l-2 border-accent/50 pl-4">
               <h3 class="text-lg font-semibold text-heading mb-2">TR8: Phrase Transform</h3>
-              <p class="text-body mb-3">Active only in Phrase Mode. Generates complete 8-bar compositions based on phrase structure templates.</p>
+              <p class="text-body mb-3">Active only when Phrase Mode is enabled. TR8 controls the algorithmic generation of Bars 3–8 from Bar 1 and Bar 2 seed material. The generation process works as follows: a form template assigns each of the 8 bar positions a structural role (statement, development, recapitulation, etc.), and the five development sliders control how the seed material is varied to fill those roles.</p>
 
-              <div class="mb-4">
-                <p class="font-medium text-heading mb-2">Features:</p>
-                <ul class="space-y-1 text-body">
-                  <li>- <strong class="text-heading">100+ Presets:</strong> Classical, Jazz, Popular, World, Electronic, Experimental</li>
-                  <li>- <strong class="text-heading">Form Templates:</strong> ABA, AABA, Rondo, and more — mirrors how classical composers built larger forms from small motifs</li>
-                  <li>- <strong class="text-heading">Editable Bar 2:</strong> Customize the "response" to Bar 1's "call"</li>
-                </ul>
-              </div>
+              <h4 class="font-medium text-heading mb-2 mt-4">Form Templates</h4>
+              <p class="text-body mb-3">Each preset includes a form template that determines the structural layout of the 8 bars. Common templates:</p>
+              <ul class="space-y-1 text-body mb-4">
+                <li>- <strong class="text-heading">ABA:</strong> Statement (Bars 1–2), Contrast (Bars 3–4), Return (Bars 5–6), Coda (Bars 7–8)</li>
+                <li>- <strong class="text-heading">AABA:</strong> Statement (1–2), Repeat (3–4), Bridge/Contrast (5–6), Return (7–8)</li>
+                <li>- <strong class="text-heading">Rondo:</strong> Theme (1–2), Episode 1 (3–4), Theme Return (5–6), Episode 2 / Coda (7–8)</li>
+                <li>- <strong class="text-heading">Through-composed:</strong> Continuous development with no literal repeats. Each bar pair introduces new material derived from the seed.</li>
+              </ul>
+
+              <h4 class="font-medium text-heading mb-2">Development Parameters</h4>
+              <p class="text-body mb-3">See the <a href="#phrase-mode" class="text-accent hover:text-accent-hover underline">Phrase Mode section</a> for detailed documentation of all five sliders (Motivic Return, Development Intensity, Energy Direction, Resolution Strength, Harmonic Motion).</p>
+
+              <h4 class="font-medium text-heading mb-2">Preset / DNA System</h4>
+              <p class="text-body mb-3">Each of the 100+ presets encodes a complete generation configuration: a form template, default values for all five sliders, and recommended TR1–TR6 settings for Bar 1 and Bar 2. Selecting a preset populates all of these values. You can then override any setting — adjust a slider, change Bar 2's scale, switch the rhythm pattern — and the algorithm regenerates accordingly.</p>
 
               <details class="mb-3">
                 <summary class="flex items-center gap-2 text-heading font-medium cursor-pointer hover:text-accent transition-colors text-xs">
                   <svg class="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-                  Advanced Parameters
+                  Preset Categories
                 </summary>
                 <div class="details-content mt-2 ml-6 space-y-2 text-xs text-body">
-                  <p><strong class="text-heading">Motivic Return:</strong> How often Bar 1's idea recurs throughout the 8-bar phrase.</p>
-                  <p><strong class="text-heading">Development Intensity:</strong> How much variation is applied to middle sections.</p>
-                  <p><strong class="text-heading">Energy Direction:</strong> Crescendo (build up) or Decrescendo (wind down).</p>
-                  <p><strong class="text-heading">Resolution Strength:</strong> How strongly and definitively the phrase ends.</p>
-                  <p><strong class="text-heading">Harmonic Motion:</strong> Amount of key/scale modulation across the phrase.</p>
+                  <p><strong class="text-heading">Classical:</strong> Presets based on Western art music conventions. Baroque presets use binary/ternary forms with ornamental variation; Classical-era presets emphasise balanced phrase structure (antecedent-consequent); Romantic presets allow wider harmonic motion and higher development intensity; Minimalist presets use high motivic return with subtle variation.</p>
+                  <p><strong class="text-heading">Jazz:</strong> Presets reflecting jazz harmonic and melodic conventions. Bebop presets use chromatic passing tones and high development intensity; Cool Jazz presets favour stepwise motion and moderate energy; Modal presets emphasise scale exploration with low harmonic motion (staying within a single mode).</p>
+                  <p><strong class="text-heading">World:</strong> Presets derived from non-Western melodic systems. These use specific scale types (pentatonic, raga-based, gamelan pelog/slendro) and contour patterns characteristic of their source traditions.</p>
+                  <p><strong class="text-heading">Electronic:</strong> Presets oriented toward electronic music production. Ambient presets use low development intensity and plateau contours; Sequence presets use repetitive patterns with gradual parameter shifts; Glitch presets apply high development intensity with irregular rhythms.</p>
+                  <p><strong class="text-heading">Experimental:</strong> Presets exploring non-traditional pitch organisation. Atonal presets avoid tonal centres; Aleatoric presets maximise randomness across parameters; Micropolyphony presets layer dense stepwise motion.</p>
                 </div>
               </details>
-
-              <details class="mb-3">
-                <summary class="flex items-center gap-2 text-heading font-medium cursor-pointer hover:text-accent transition-colors text-xs">
-                  <svg class="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-                  DNA Presets by Genre
-                </summary>
-                <div class="details-content mt-2 ml-6 space-y-1 text-xs text-body">
-                  <p><strong class="text-heading">Classical:</strong> Baroque Dance, Romantic Nocturne, Minimalist Pulse...</p>
-                  <p><strong class="text-heading">Jazz:</strong> Bebop Lines, Cool Jazz, Modal Exploration...</p>
-                  <p><strong class="text-heading">World:</strong> Gamelan, Raga-inspired, Celtic Air...</p>
-                  <p><strong class="text-heading">Electronic:</strong> Ambient Drift, Techno Sequence, Glitch Melody...</p>
-                  <p><strong class="text-heading">Experimental:</strong> Atonal, Aleatoric, Micropolyphony...</p>
-                </div>
-              </details>
-
-              <div class="bg-surface-alt rounded-lg p-3 border-l-4 border-accent text-xs">
-                <strong class="text-accent">Music Theory:</strong> Phrase Mode uses formal structures (ABA, AABA, Rondo, etc.). This mirrors how classical composers built larger forms from small motifs — providing structural coherence across all 8 bars.
-              </div>
             </div>
           </section>
 
           <!-- 13. MIDI Import -->
           <section id="midi-import">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">MIDI Import</h2>
-            <p class="mb-4">Bring in MIDI files from your DAW or other apps. Edit, transform, and build on melodies you've already started.</p>
+            <p class="mb-4">Import standard MIDI files (.mid) to extract melodic fragments and their musical properties. Imported material can be analysed, segmented, and applied to bars as transform settings.</p>
 
-            <h3 class="text-lg font-semibold text-heading mb-2">How It Works</h3>
+            <h3 class="text-lg font-semibold text-heading mb-2">Import Process</h3>
             <ol class="space-y-2 mb-4">
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">1.</span>
-                <div><strong class="text-heading">Load a MIDI File</strong> — Click "Load from file" and select a .mid file from your device.</div>
+                <div><strong class="text-heading">Load a MIDI File</strong> — Select a .mid file from your device via "Load from file".</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">2.</span>
-                <div><strong class="text-heading">Track Selection</strong> — Single-track files import automatically. Multi-track files let you choose which track to use.</div>
+                <div><strong class="text-heading">Track Selection</strong> — Single-track files import automatically. Multi-track files present a track selector to choose which melodic line to analyse.</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">3.</span>
-                <div><strong class="text-heading">Fragment Analysis</strong> — TC-01 analyzes the MIDI data and breaks it into fragments on a pad grid.</div>
+                <div><strong class="text-heading">Fragment Analysis</strong> — TC-01 segments the MIDI data into bar-length fragments displayed on a pad grid. The analysis detects phrase boundaries based on rests and rhythmic grouping.</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">4.</span>
-                <div><strong class="text-heading">Property Extraction</strong> — Musical properties (key, scale, motion, contour, rhythm) are extracted and can be applied to bars.</div>
+                <div><strong class="text-heading">Property Extraction</strong> — For each fragment, TC-01 extracts: the most likely key (TR1) and scale (TR2) from pitch class distribution; the predominant interval motion type (TR3) from consecutive note analysis; the contour shape (TR4) from pitch trajectory; and the rhythm pattern (TR5) from note onset/duration data. These extracted properties can be applied directly to any bar as transform settings.</div>
               </li>
             </ol>
 
@@ -827,9 +735,9 @@
               <div class="details-content mt-3 ml-6 text-body">
                 <ul class="space-y-1">
                   <li>- Imported files are listed with filename, upload timestamp, and track count badge</li>
-                  <li>- Delete individual MIDI files with confirmation</li>
-                  <li>- Browse fragments after at least 1 file is uploaded</li>
-                  <li>- All files are associated with your current project</li>
+                  <li>- Individual files can be deleted with confirmation</li>
+                  <li>- Fragment browsing is available after at least one file is imported</li>
+                  <li>- All imported files are associated with the current project</li>
                 </ul>
               </div>
             </details>
@@ -838,25 +746,25 @@
           <!-- 14. Voice Recording -->
           <section id="voice-recording">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Voice Recording</h2>
-            <p class="mb-4">Hum a melody or sing a tune and TC-01 transcribes it into notes instantly. You can also import an audio file instead of recording live.</p>
+            <p class="mb-4">Records monophonic audio (humming, singing, or whistling) and converts it to MIDI note data via pitch detection. Audio files can also be imported instead of recording live.</p>
 
-            <h3 class="text-lg font-semibold text-heading mb-2">How It Works</h3>
+            <h3 class="text-lg font-semibold text-heading mb-2">Process</h3>
             <ol class="space-y-2 mb-4">
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">1.</span>
-                <div><strong class="text-heading">Choose a Voice Preset</strong> — Select your vocal range (Soprano, Alto, Tenor, Bass, etc.) to help constrain pitch detection.</div>
+                <div><strong class="text-heading">Select Voice Preset</strong> — Choose a vocal range (Soprano, Alto, Tenor, Bass, etc.). This constrains the pitch detection algorithm to the expected frequency range, improving accuracy.</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">2.</span>
-                <div><strong class="text-heading">Record</strong> — Optional metronome count-in using your project's BPM. Real-time waveform visualization while recording.</div>
+                <div><strong class="text-heading">Record</strong> — An optional metronome count-in syncs to the project BPM. A real-time waveform display shows input levels during recording.</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">3.</span>
-                <div><strong class="text-heading">Pitch Detection</strong> — TC-01 auto-converts your recording to MIDI notes with per-note confidence visualization.</div>
+                <div><strong class="text-heading">Pitch Detection</strong> — The audio is analysed to extract fundamental frequency per time window. Each detected pitch is mapped to the nearest chromatic note, producing a sequence of MIDI note events with onset times and durations.</div>
               </li>
               <li class="flex gap-3">
                 <span class="text-accent font-bold shrink-0">4.</span>
-                <div><strong class="text-heading">Quantization</strong> — Detected notes are quantized to the grid and become usable melody fragments.</div>
+                <div><strong class="text-heading">Quantization</strong> — Detected note onsets are snapped to the nearest beat subdivision grid (based on the project BPM and time signature). Note durations are rounded to the nearest grid value. The quantized notes become usable melody fragments that can be applied to bars.</div>
               </li>
             </ol>
 
@@ -866,13 +774,13 @@
                 Detection Confidence
               </summary>
               <div class="details-content mt-3 ml-6 text-body">
-                <p class="mb-2">Each detected note shows a confidence indicator:</p>
+                <p class="mb-2">Each detected note displays a confidence indicator reflecting pitch detection certainty:</p>
                 <ul class="space-y-1">
-                  <li>- <span class="text-emerald-400 font-medium">Green</span> (95%+) — High confidence detection</li>
-                  <li>- <span class="text-amber-400 font-medium">Amber</span> (90-95%) — Good detection</li>
-                  <li>- <span class="text-red-400 font-medium">Red</span> (&lt;90%) — Lower confidence, may need editing</li>
+                  <li>- <span class="text-emerald-400 font-medium">Green</span> (95%+) — High confidence: clear fundamental frequency detected</li>
+                  <li>- <span class="text-amber-400 font-medium">Amber</span> (90–95%) — Moderate confidence: likely correct but may benefit from manual review</li>
+                  <li>- <span class="text-red-400 font-medium">Red</span> (&lt;90%) — Low confidence: ambiguous pitch, manual correction recommended</li>
                 </ul>
-                <p class="mt-2 text-xs text-body/70">Microphone audio is processed entirely on your device and never transmitted to any server. Recordings are stored temporarily with a 24-hour expiry.</p>
+                <p class="mt-2 text-xs text-body/70">Audio is processed entirely on-device and is never transmitted externally. Recordings are stored temporarily with a 24-hour expiry.</p>
               </div>
             </details>
           </section>
@@ -940,75 +848,50 @@
               <div class="space-y-2 font-mono text-xs">
                 <div class="flex justify-between border-b border-white/5 pb-2">
                   <span class="text-accent">Ctrl+S</span>
-                  <span class="text-body">Save Preset</span>
+                  <span class="text-body">Save Preset (.kai) <span class="text-accent font-medium">Pro</span></span>
                 </div>
                 <div class="flex justify-between border-b border-white/5 pb-2">
                   <span class="text-accent">Ctrl+O</span>
-                  <span class="text-body">Load Preset</span>
+                  <span class="text-body">Load Preset (.kai) <span class="text-accent font-medium">Pro</span></span>
                 </div>
                 <div class="flex justify-between border-b border-white/5 pb-2">
                   <span class="text-accent">Space</span>
-                  <span class="text-body">Play / Stop (when not typing)</span>
+                  <span class="text-body">Play / Stop (when no text input is focused)</span>
                 </div>
                 <div class="flex justify-between">
                   <span class="text-accent">Esc</span>
-                  <span class="text-body">Close open modal</span>
+                  <span class="text-body">Close the currently open modal</span>
                 </div>
               </div>
             </div>
 
-            <div class="grid sm:grid-cols-2 gap-6">
-              <div>
-                <h3 class="text-lg font-semibold text-heading mb-3">For Beginners</h3>
-                <ul class="space-y-3">
-                  <li>
-                    <p class="text-accent font-medium">Start Simple</p>
-                    <p class="text-body text-xs">One bar, Major scale, Stepwise motion, Quarter-note rhythm. Add complexity gradually.</p>
-                  </li>
-                  <li>
-                    <p class="text-accent font-medium">Use the Metronome</p>
-                    <p class="text-body text-xs">Helps you understand rhythm patterns, especially syncopation.</p>
-                  </li>
-                  <li>
-                    <p class="text-accent font-medium">Preview Rhythms</p>
-                    <p class="text-body text-xs">TR5 has a preview button — always listen before applying.</p>
-                  </li>
-                  <li>
-                    <p class="text-accent font-medium">Experiment with Modes</p>
-                    <p class="text-body text-xs">Don't stay in Major/Minor. Try Dorian or Mixolydian for fresh colors.</p>
-                  </li>
-                  <li>
-                    <p class="text-accent font-medium">Save Often</p>
-                    <p class="text-body text-xs">Ctrl+S saves your preset as a .kai file. Save versions as you experiment.</p>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-heading mb-3">For Advanced Users</h3>
-                <ul class="space-y-3">
-                  <li>
-                    <p class="text-accent font-medium">Random Exploration</p>
-                    <p class="text-body text-xs">Pick random settings across all transforms — discover happy accidents.</p>
-                  </li>
-                  <li>
-                    <p class="text-accent font-medium">Polymeter Experiments</p>
-                    <p class="text-body text-xs">Use different bar lengths per bar (TR5). E.g., Bar 1 = 4/4, Bar 2 = 3/4 for complex polyrhythmic textures.</p>
-                  </li>
-                  <li>
-                    <p class="text-accent font-medium">Strategic Ornamentation</p>
-                    <p class="text-body text-xs">Don't ornament every note — target key moments (cadences, long notes).</p>
-                  </li>
-                  <li>
-                    <p class="text-accent font-medium">Phrase Mode for Development</p>
-                    <p class="text-body text-xs">Use TR8 to expand 2-bar ideas into full 8-bar compositions.</p>
-                  </li>
-                  <li>
-                    <p class="text-accent font-medium">Contour + Motion Combos</p>
-                    <p class="text-body text-xs">Arch + Skip = dramatic arc. Plateau + Leap = restless energy. Valley + Stepwise = gentle sigh.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <h3 class="text-lg font-semibold text-heading mb-3">Usage Notes</h3>
+            <ul class="space-y-3">
+              <li>
+                <p class="text-accent font-medium">Metronome</p>
+                <p class="text-body text-xs">Enable the metronome during playback to verify rhythm alignment, particularly when using syncopated or custom patterns.</p>
+              </li>
+              <li>
+                <p class="text-accent font-medium">Rhythm Preview</p>
+                <p class="text-body text-xs">TR5 includes a preview function that plays the selected rhythm pattern with a metronome click before applying it to the bar.</p>
+              </li>
+              <li>
+                <p class="text-accent font-medium">Polymetre</p>
+                <p class="text-body text-xs">Bars can use different beat counts (TR5). Setting Bar 1 to 4/4 and Bar 2 to 3/4 produces polymetric interaction across bars.</p>
+              </li>
+              <li>
+                <p class="text-accent font-medium">Ornamentation Placement</p>
+                <p class="text-body text-xs">Ornaments (TR6) are most effective on notes with sufficient duration. Applying ornaments to very short notes can produce inaudible subdivisions.</p>
+              </li>
+              <li>
+                <p class="text-accent font-medium">Contour + Motion Interaction</p>
+                <p class="text-body text-xs">TR3 and TR4 interact: Arch contour with Stepwise motion produces smooth conjunct arcs; Plateau contour with Leap motion produces angular lines within a narrow register.</p>
+              </li>
+              <li>
+                <p class="text-accent font-medium">Phrase Mode Development</p>
+                <p class="text-body text-xs">To expand a 2-bar idea, configure Bars 1–2 in Free Mode, then enable Phrase Mode and open TR8 to generate Bars 3–8 algorithmically.</p>
+              </li>
+            </ul>
 
           </section>
 
@@ -1069,8 +952,7 @@
 
             <div class="mt-6 bg-surface-alt rounded-lg p-4 border-l-4 border-accent">
               <p class="font-medium text-heading mb-1">Need More Help?</p>
-              <p class="text-body text-xs">TC-01 is designed for exploration — there are no "wrong" settings. Start with Phrase Mode presets to hear professional structures, use Free Mode to understand how each transform affects the melody, and trust your ears. The best way to learn TC-01 is to play with it.</p>
-              <p class="text-body text-xs mt-2">Have a question? <button onclick="document.getElementById('contact-open').click()" class="text-accent hover:text-accent-hover underline cursor-pointer">Contact us</button> — we'd love to hear from you.</p>
+              <p class="text-body text-xs">For questions not covered in this guide, <button onclick="document.getElementById('contact-open').click()" class="text-accent hover:text-accent-hover underline cursor-pointer">contact us</button> with a description of the issue and we will respond as quickly as possible.</p>
             </div>
           </section>
 
