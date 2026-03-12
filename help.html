@@ -78,11 +78,12 @@
           <a href="#phrase-mode" class="block text-body hover:text-accent transition-colors">Phrase Mode</a>
           <a href="#free-mode" class="block text-body hover:text-accent transition-colors">Free Mode</a>
           <a href="#bar-system" class="block text-body hover:text-accent transition-colors">Bars &amp; Sections</a>
-          <a href="#tr1-tr2" class="block text-body hover:text-accent transition-colors">Transforms</a>
+          <a href="#transforms" class="block text-body hover:text-accent transition-colors">Transforms</a>
+          <a href="#microtonal" class="block text-body hover:text-accent transition-colors">Microtonal Support</a>
           <a href="#midi-import" class="block text-body hover:text-accent transition-colors">MIDI Import</a>
           <a href="#voice-recording" class="block text-body hover:text-accent transition-colors">Voice Recording</a>
           <a href="#note-edit" class="block text-body hover:text-accent transition-colors">Note Edit Mode</a>
-          <a href="#exporting" class="block text-body hover:text-accent transition-colors">Exporting</a>
+          <a href="#saving-exporting" class="block text-body hover:text-accent transition-colors">Saving &amp; Exporting</a>
           <a href="#shortcuts" class="block text-body hover:text-accent transition-colors">Shortcuts</a>
           <a href="#activating-pro" class="block text-body hover:text-accent transition-colors">Activating Pro</a>
         </nav>
@@ -99,11 +100,12 @@
             <a href="#phrase-mode" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Phrase Mode</a>
             <a href="#free-mode" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Free Mode</a>
             <a href="#bar-system" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Bars &amp; Sections</a>
-            <a href="#tr1-tr2" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Transforms</a>
+            <a href="#transforms" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Transforms</a>
+            <a href="#microtonal" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Microtonal Support</a>
             <a href="#midi-import" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">MIDI Import</a>
             <a href="#voice-recording" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Voice Recording</a>
             <a href="#note-edit" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Note Edit Mode</a>
-            <a href="#exporting" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Exporting</a>
+            <a href="#saving-exporting" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Saving &amp; Exporting</a>
             <a href="#shortcuts" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Shortcuts</a>
             <a href="#activating-pro" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Activating Pro</a>
           </nav>
@@ -119,7 +121,7 @@
 
             <p class="mb-4">In <strong class="text-heading">Free Mode</strong> (default) you control every bar manually. In <strong class="text-heading">Phrase Mode</strong> you set up Bar 1 and Bar 2 as seed material and TC-01 algorithmically generates Bars 3–8 using a form template and five development sliders (TR8).</p>
 
-            <p class="text-body">Available as a free web app, Android app, and desktop application. Features marked <span class="text-accent text-xs font-medium">Pro</span> require a license.</p>
+            <p class="text-body">Available as a free cross-platform web app (PWA), Android app, and Windows desktop application. Features marked <span class="text-accent text-xs font-medium">Pro</span> require a license.</p>
           </section>
 
           <!-- 2. Interface Overview -->
@@ -140,7 +142,16 @@
 </pre>
             </div>
 
-            <p class="text-body mb-3">Tap a bar to select it, then use the transform buttons to configure it. Drag bars to copy settings between them, or drag outside the grid to delete. Sections work the same way — tap to switch, drag to copy or delete.</p>
+            <p class="text-body mb-3">The interface has four rows. The <strong class="text-heading">Section Carousel</strong> at the top lets you switch between sections. The <strong class="text-heading">Bar Grid</strong> shows 8 bars — tap to select, drag between bars to copy settings, or drag outside the grid to delete a bar. Sections work the same way in the carousel.</p>
+
+            <p class="font-medium text-heading mb-2">Transport Bar</p>
+            <ul class="space-y-1 text-body mb-3">
+              <li>- <strong class="text-heading">Menu:</strong> Access settings, rename sections, export, save/load sessions, and activate Pro.</li>
+              <li>- <strong class="text-heading">Select:</strong> Enter Select Mode to mark specific bars for focused playback. Tap bars to toggle them on or off — only selected bars will play.</li>
+              <li>- <strong class="text-heading">Play/Stop:</strong> Start or stop playback.</li>
+              <li>- <strong class="text-heading">Phrase/Loop:</strong> Toggle between Phrase Mode (algorithmic generation) and Loop Mode (continuous looping of active bars).</li>
+              <li>- <strong class="text-heading">Met:</strong> Toggle the metronome on or off during playback.</li>
+            </ul>
 
             <p class="text-body text-xs">Colour coding: <span class="text-green-400 font-medium">green</span> = playing, <span class="text-orange-400 font-medium">orange</span> = selected, full opacity = active, greyed out = inactive.</p>
           </section>
@@ -148,7 +159,7 @@
           <!-- 3. Phrase Mode -->
           <section id="phrase-mode">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Phrase Mode</h2>
-            <p class="mb-4">Enable Phrase Mode in the transport bar, open TR8, and pick a preset. This populates Bars 1–2 and sets five development sliders that control how Bars 3–8 are generated. You can override any setting — edit Bar 1/2 transforms, adjust sliders — then press Play.</p>
+            <p class="mb-4">Tap the Phrase/Loop button in the transport bar to enable Phrase Mode, open TR8, and pick a preset. This populates Bars 1–2 as seed material and sets five development sliders that control how Bars 3–8 are algorithmically generated. You can override any setting — edit Bar 1/2 transforms, adjust sliders — then press Play.</p>
 
             <p class="font-medium text-heading mb-2">Development Sliders</p>
             <ul class="space-y-1 text-body mb-3">
@@ -166,21 +177,20 @@
           <!-- 4. Free Mode -->
           <section id="free-mode">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Free Mode</h2>
-            <p class="text-body">The default mode. Configure each bar independently using TR1–TR7. A typical workflow: set up Bar 1, drag it to Bar 2 to copy, then tweak a parameter or two for variation. Repeat to build out your composition.</p>
+            <p class="text-body">The default mode. Configure each bar independently using TR1–TR7. A typical workflow: set up Bar 1, drag it to Bar 2 to copy, then tweak a parameter or two for variation. Repeat to build out your composition. Use Loop Mode (transport bar) to continuously loop playback through your active bars.</p>
           </section>
 
           <!-- 5. The Bar System -->
           <section id="bar-system">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Bars &amp; Sections</h2>
-            <p class="text-body mb-3">Each section holds 8 bars with independent settings. Playback runs left to right through active bars, then advances to the next section. Tap "+" to add sections; rename via Menu. Use <strong class="text-heading">Select Mode</strong> (transport bar) to mark specific bars for focused playback.</p>
+            <p class="text-body mb-3">Each section holds 8 bars with independent settings. Playback runs left to right through active bars, then advances to the next section. Tap "+" in the section carousel to add new sections; rename or delete sections via Menu.</p>
+
+            <p class="font-medium text-heading mb-2">Select Mode</p>
+            <p class="text-body">Tap <strong class="text-heading">Select</strong> in the transport bar to enter Select Mode. Tap individual bars to mark or unmark them — only marked bars will play during playback. This is useful for auditioning specific bars or isolating a passage. Tap Select again to exit and return to normal playback.</p>
           </section>
 
-          <!-- 6–7: Section Builder & Select Mode (merged into Bars & Sections above) -->
-          <section id="section-builder" class="hidden"></section>
-          <section id="select-mode" class="hidden"></section>
-
-          <!-- 8. Transforms -->
-          <section id="tr1-tr2">
+          <!-- 6. Transforms -->
+          <section id="transforms">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Transforms</h2>
 
             <div class="space-y-4">
@@ -191,22 +201,25 @@
 
               <div class="border-l-2 border-accent/50 pl-4">
                 <p class="font-medium text-heading">TR2: Scale</p>
-                <p class="text-body">Constrains generated notes to the selected scale. Includes Major, Minor, Harmonic/Melodic Minor, and all modes (Dorian, Phrygian, Lydian, Mixolydian, Locrian).</p>
+                <p class="text-body">Constrains generated notes to the selected scale. Includes Major, Minor, Harmonic Minor, Melodic Minor, and all modes (Dorian, Phrygian, Lydian, Mixolydian, Locrian). Microtonal scales are also available — see <a href="#microtonal" class="text-accent hover:text-accent-hover underline">Microtonal Support</a>.</p>
               </div>
 
-              <div class="border-l-2 border-accent/50 pl-4" id="tr3-tr4">
+              <div class="border-l-2 border-accent/50 pl-4">
                 <p class="font-medium text-heading">TR3: Motion</p>
                 <p class="text-body">Interval size — Stepwise (2nds/3rds), Skip (4ths/5ths/6ths), Leap (7ths+), or Mixed.</p>
               </div>
 
               <div class="border-l-2 border-accent/50 pl-4">
                 <p class="font-medium text-heading">TR4: Contour</p>
-                <p class="text-body">Pitch direction — Rising, Falling, Arch, Valley, or Plateau. Advanced options: Gravity Points (pitch targets within a bar) and Multi-Bar Contours (span a shape across up to 4 bars).</p>
+                <p class="text-body mb-2">Pitch direction — Rising, Falling, Arch, Valley, or Plateau.</p>
+                <p class="text-body text-xs mb-1"><strong class="text-heading">Gravity Points:</strong> Set specific pitch targets within a bar that the melody is drawn toward, creating more nuanced contour shapes.</p>
+                <p class="text-body text-xs"><strong class="text-heading">Multi-Bar Contours:</strong> Span a single contour shape across up to 4 consecutive bars for longer, more cohesive melodic arcs.</p>
               </div>
 
-              <div class="border-l-2 border-accent/50 pl-4" id="tr5-tr6">
+              <div class="border-l-2 border-accent/50 pl-4">
                 <p class="font-medium text-heading">TR5: Rhythm</p>
-                <p class="text-body">Choose a preset pattern or build your own on a subdivision grid. Set bar length (2/4, 3/4, 4/4) — bars can differ for polymetre. Supports anacrusis (pickup notes) and preview before applying.</p>
+                <p class="text-body mb-2">Choose a preset pattern or build your own on a subdivision grid. Set bar length (2/4, 3/4, 4/4) — bars can differ for polymetre. Preview a rhythm before applying it.</p>
+                <p class="text-body text-xs"><strong class="text-heading">Anacrusis:</strong> Add pickup notes before the downbeat of a bar. Enable this in TR5 to create phrases that lead into the next bar.</p>
               </div>
 
               <div class="border-l-2 border-accent/50 pl-4">
@@ -214,44 +227,57 @@
                 <p class="text-body">Embellishments applied to notes — Trill, Mordent, Turn, Appoggiatura, or Grace Note.</p>
               </div>
 
-              <div class="border-l-2 border-accent/50 pl-4" id="tr7">
+              <div class="border-l-2 border-accent/50 pl-4">
                 <p class="font-medium text-heading">TR7: Instrument</p>
-                <p class="text-body">Sound source (Piano, Bass, etc.), octave shift, volume, reverb, and stereo pan. Load custom WAV/MP3 samples as instruments. <span class="text-accent text-xs font-medium">Pro</span></p>
+                <p class="text-body mb-2">Sound source, octave shift, volume, reverb, and stereo pan. Choose from built-in instruments (Piano, Bass, etc.).</p>
+                <p class="text-body text-xs"><strong class="text-heading">Custom Samples</strong> <span class="text-accent font-medium">Pro</span> — Load your own WAV or MP3 files as instruments. Open TR7 and use the import option to load a sample from your device. The sample will be mapped across the pitch range automatically.</p>
               </div>
 
-              <div class="border-l-2 border-accent/50 pl-4" id="tr8">
+              <div class="border-l-2 border-accent/50 pl-4">
                 <p class="font-medium text-heading">TR8: Phrase</p>
-                <p class="text-body">Only active in Phrase Mode. See <a href="#phrase-mode" class="text-accent hover:text-accent-hover underline">Phrase Mode</a> above.</p>
+                <p class="text-body">Only active in Phrase Mode. Controls the development sliders and presets. See <a href="#phrase-mode" class="text-accent hover:text-accent-hover underline">Phrase Mode</a> above.</p>
               </div>
             </div>
           </section>
 
-          <!-- 13. MIDI Import -->
-          <section id="midi-import">
-            <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">MIDI Import</h2>
-            <p class="text-body">Load a .mid file and TC-01 segments it into bar-length fragments, extracting key, scale, motion, contour, and rhythm as transform settings you can apply to any bar.</p>
+          <!-- 7. Microtonal Support -->
+          <section id="microtonal">
+            <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Microtonal Support</h2>
+            <p class="text-body mb-3">TC-01 supports microtonal scales beyond standard 12-TET (12-tone equal temperament) tuning. This lets you explore tuning systems used in non-Western music traditions, experimental composition, and alternative temperaments.</p>
+            <p class="text-body">Access microtonal scales through <strong class="text-heading">TR2: Scale</strong>. When a microtonal scale is selected, the pitch output adjusts accordingly — all other transforms (motion, contour, rhythm, ornaments) continue to work as normal with the microtonal pitch set.</p>
           </section>
 
-          <!-- 14. Voice Recording -->
+          <!-- 8. MIDI Import -->
+          <section id="midi-import">
+            <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">MIDI Import</h2>
+            <p class="text-body">Load a .mid file and TC-01 segments it into bar-length fragments, extracting key, scale, motion, contour, and rhythm as transform settings you can apply to any bar. Use this to build on melodies from your DAW or other apps.</p>
+          </section>
+
+          <!-- 9. Voice Recording -->
           <section id="voice-recording">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Voice Recording</h2>
-            <p class="text-body mb-2">Hum, sing, or whistle and TC-01 converts it to note data via pitch detection. Select a vocal range preset first for better accuracy. Detected pitches are quantised to the beat grid.</p>
+            <p class="text-body mb-2">Hum, sing, or whistle a melody — or import an audio file — and TC-01 transcribes it into note data via pitch detection. Select a vocal range preset first for better accuracy. Detected pitches are quantised to the beat grid.</p>
             <p class="text-body text-xs">Audio is processed on-device and never transmitted. Recordings expire after 24 hours.</p>
           </section>
 
-          <!-- 15. Note Edit Mode -->
+          <!-- 10. Note Edit Mode -->
           <section id="note-edit">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Note Edit Mode <span class="text-accent text-sm font-medium">Pro</span></h2>
-            <p class="text-body">Double-tap any active bar to open a tracker-style note editor. Edit in Chromatic or Scale-Relative mode with undo/redo and real-time preview.</p>
+            <p class="text-body">Double-tap any active bar to open a tracker-style note editor. Edit individual notes in <strong class="text-heading">Chromatic</strong> mode (all 12 semitones) or <strong class="text-heading">Scale-Relative</strong> mode (only notes from the selected scale). Includes undo/redo and real-time preview as you edit.</p>
           </section>
 
-          <!-- 16. Exporting -->
-          <section id="exporting">
-            <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Exporting <span class="text-accent text-sm font-medium">Pro</span></h2>
-            <p class="text-body mb-2">Via the Menu — export as <strong class="text-heading">MIDI</strong> (.mid), <strong class="text-heading">Audio</strong> (.wav), or <strong class="text-heading">Preset</strong> (.kai project file). Choose to export the current playback range or all active bars.</p>
+          <!-- 11. Saving & Exporting -->
+          <section id="saving-exporting">
+            <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Saving &amp; Exporting <span class="text-accent text-sm font-medium">Pro</span></h2>
+
+            <p class="font-medium text-heading mb-2">Save &amp; Recall Sessions</p>
+            <p class="text-body mb-3">Save your current session as a <strong class="text-heading">.kai</strong> project file via Menu or <span class="font-mono text-accent text-xs">Ctrl+S</span>. This preserves all sections, bars, and transform settings. Load a saved session with <span class="font-mono text-accent text-xs">Ctrl+O</span> or via Menu.</p>
+
+            <p class="font-medium text-heading mb-2">Export</p>
+            <p class="text-body">Via the Menu — export as <strong class="text-heading">MIDI</strong> (.mid), <strong class="text-heading">Audio</strong> (.wav), or <strong class="text-heading">Preset</strong> (.kai project file). Choose to export the current playback range or all active bars.</p>
           </section>
 
-          <!-- 17. Keyboard Shortcuts & Tips -->
+          <!-- 12. Keyboard Shortcuts -->
           <section id="shortcuts">
             <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3">Shortcuts</h2>
 
@@ -267,11 +293,11 @@
                 </div>
                 <div class="flex justify-between border-b border-white/5 pb-2">
                   <span class="text-accent">Ctrl+S</span>
-                  <span class="text-body">Save Preset <span class="text-accent font-medium">Pro</span></span>
+                  <span class="text-body">Save Session <span class="text-accent font-medium">Pro</span></span>
                 </div>
                 <div class="flex justify-between">
                   <span class="text-accent">Ctrl+O</span>
-                  <span class="text-body">Load Preset <span class="text-accent font-medium">Pro</span></span>
+                  <span class="text-body">Load Session <span class="text-accent font-medium">Pro</span></span>
                 </div>
               </div>
             </div>
