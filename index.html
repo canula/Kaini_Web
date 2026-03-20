@@ -1,176 +1,419 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Kaini Instruments | Coming Soon</title>
-    <meta name="description" content="Something new is on the way from Kaini Instruments. Stay tuned." />
+    <!-- Primary SEO -->
+    <title>Melody Generator App | TC-01 Tone Calculator</title>
+    <meta name="description" content="Generate inspiring melodies in seconds — no music theory needed. TC-01 Tone Calculator is a free melody generator app for Android, Windows, and Web. Also your melody creator and song maker app." />
 
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://kaini-instruments.com/" />
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Kaini Instruments | Coming Soon" />
-    <meta property="og:description" content="Something new is on the way from Kaini Instruments. Stay tuned." />
+    <meta property="og:title" content="Melody Generator App | TC-01 Tone Calculator" />
+    <meta property="og:description" content="Generate melodies in seconds — no music theory needed." />
+    <meta property="og:image" content="https://kaini-instruments.com/assets/images/og-image.png" />
     <meta property="og:url" content="https://kaini-instruments.com/" />
+    <meta property="og:site_name" content="TC-01 Tone Calculator" />
+    <meta property="og:locale" content="en_US" />
 
+    <!-- Favicon and browser tab -->
     <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <meta name="theme-color" content="#1a1a1a" />
 
+    <!-- Google Fonts — Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: #1a1a1a;
-        color: #94a3b8;
-        font-family: 'Inter', sans-serif;
-        text-align: center;
-        padding: 2rem;
+    <!-- JSON-LD SoftwareApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "TC-01 Tone Calculator",
+      "applicationCategory": "MusicApplication",
+      "operatingSystem": "Android, Windows, Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free download with optional Pro license key"
+      },
+      "url": "https://kaini-instruments.com/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kaini Instruments"
       }
-      .logo { height: 2rem; margin-bottom: 2rem; }
-      h1 {
-        font-family: 'Audiowide', cursive;
-        color: #f97316;
-        font-size: clamp(1.5rem, 5vw, 3rem);
-        margin-bottom: 1rem;
-      }
-      p {
-        font-size: 1.125rem;
-        max-width: 28rem;
-        line-height: 1.6;
-        margin-bottom: 2rem;
-      }
-      .contact-btn {
-        display: inline-block;
-        background: #f97316;
-        color: #fff;
-        font-weight: 600;
-        padding: 0.75rem 2rem;
-        border-radius: 0.5rem;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-        font-size: 1rem;
-        font-family: 'Inter', sans-serif;
-        transition: background 0.2s;
-      }
-      .contact-btn:hover { background: #ea580c; }
-      footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        padding: 1.5rem;
-        font-size: 0.75rem;
-        color: #64748b;
-        text-align: center;
-      }
-      footer a { color: #94a3b8; text-decoration: none; }
-      footer a:hover { color: #f8fafc; }
+    }
+    </script>
 
-      /* Modal */
-      .modal-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 60;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0,0,0,0.6);
-        backdrop-filter: blur(4px);
+    <!-- Lemon Squeezy overlay checkout -->
+    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-accent: #f97316;
+        --color-accent-hover: #ea580c;
+        --color-surface: #1a1a1a;
+        --color-surface-alt: #2a2a2a;
+        --color-heading: #f8fafc;
+        --color-body: #94a3b8;
+        --color-nav: #1a1a1a;
       }
-      .modal-overlay.open { display: flex; }
-      .modal {
-        background: #2a2a2a;
-        border: 1px solid rgba(255,255,255,0.1);
-        border-radius: 1rem;
-        padding: 2rem;
-        width: 100%;
-        max-width: 26rem;
-        margin: 1rem;
-        position: relative;
-      }
-      .modal h2 { color: #f8fafc; font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; }
-      .modal label { display: block; color: #94a3b8; font-size: 0.875rem; margin-bottom: 0.25rem; }
-      .modal input, .modal textarea {
-        width: 100%;
-        background: #1a1a1a;
-        border: 1px solid rgba(255,255,255,0.1);
-        border-radius: 0.5rem;
-        padding: 0.625rem 1rem;
-        color: #f8fafc;
-        font-size: 0.875rem;
-        font-family: 'Inter', sans-serif;
-        margin-bottom: 1rem;
-        outline: none;
-        transition: border-color 0.2s;
-      }
-      .modal input:focus, .modal textarea:focus { border-color: #f97316; }
-      .modal textarea { resize: none; height: 6rem; }
-      .close-btn {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: none;
-        border: none;
-        color: #94a3b8;
-        cursor: pointer;
-        font-size: 1.5rem;
-        line-height: 1;
-      }
-      .close-btn:hover { color: #f8fafc; }
     </style>
   </head>
-  <body>
+  <body class="bg-surface text-body font-['Inter',sans-serif]">
 
-    <img src="/assets/images/kaini-logo.svg" alt="Kaini Instruments" class="logo" />
-    <h1>Coming Soon</h1>
-    <p>Something new is on the way. We're working on it and can't wait to share it with you.</p>
-    <button class="contact-btn" id="contact-open">Get in Touch</button>
+    <!-- Sticky Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-nav/90 backdrop-blur-sm border-b border-white/10">
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
+        <!-- Brand (left) -->
+        <a href="#" class="flex items-center gap-3">
+          <img src="assets/images/kaini-logo.svg" alt="Kaini Logo" class="h-4 w-auto" />
+        </a>
 
-    <footer>
-      &copy; 2026 Kaini Instruments Ltd.
-      &nbsp;&middot;&nbsp;
-      <a href="/privacy">Privacy</a>
-      &nbsp;&middot;&nbsp;
-      <a href="/terms">Terms</a>
+        <!-- TC-01 Logo + Tone Calculator (right) -->
+        <div class="flex items-center gap-2">
+          <img src="assets/images/tc01-logo.webp" alt="TC-01" class="h-9 w-auto" />
+          <span class="text-sm hidden sm:inline" style="font-family: 'Audiowide', cursive; color: #f97316;">Tone Calculator</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-surface pt-32 pb-24">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <!-- Left column: text + CTAs -->
+        <div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-heading mb-4">
+            Create inspiring melodies in seconds. 
+          </h1>
+          <p class="text-lg text-body mb-8 max-w-lg">
+            The TC-01 Tone Calculator turns your ideas into melodies easily. Hum a tune, flip an existing melody, or generate something new — then export to your DAW. Available for download on all devices.
+          </p>
+          <!-- CTA row -->
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="https://kaini-instruments.com/tone-calculator/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+              PWA App (Cross Platform)
+            </a>
+          </div>
+        </div>
+
+        <!-- Right column: phone mockup -->
+        <div class="flex justify-center">
+          <img src="assets/images/screenshots/phone-01.png" alt="TC-01 Melody Generator app screenshot" class="w-64 md:w-72 rounded-2xl shadow-2xl border-2 border-accent" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="bg-surface py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-heading text-center mb-4">Features</h2>
+        <div class="flex justify-center mb-16 mt-20">
+          <img src="assets/images/screenshots/DesktopMainUI.png" alt="TC-01 desktop main interface" class="w-3/4 rounded-2xl shadow-lg border-2 border-accent" />
+        </div>
+
+        <!-- Row 1: Record Voice — text left, image right -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">Record Voice</h3>
+            </div>
+            <p class="text-body">Hum a melody or import and audio file and TC-01 transcribes it into notes instantly.</p>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/screenshots/voice.png" alt="TC-01 desktop interface showing voice recording" class="w-full rounded-2xl shadow-lg border-2 border-accent" />
+          </div>
+        </div>
+
+        <!-- Row 2: MIDI Import — image left, text right -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+          <div class="md:order-last">
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">MIDI Import</h3>
+            </div>
+            <p class="text-body">Bring in MIDI files from your DAW or other apps. Edit, transform, and build on melodies you've already started. Save the rhythm, contour, or melodic motion of proven melodies and apply them to others to create entirely new compositions.</p>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/screenshots/ImportMidi.png" alt="TC-01 MIDI import screen" class="w-48 md:w-56 rounded-2xl shadow-lg border-2 border-accent" />
+          </div>
+        </div>
+
+        <!-- Row 3: Motion / Contour / Rhythm Presets — text left, video right -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">Motion / Contour / Rhythm Presets</h3>
+            </div>
+            <p class="text-body">Choose from built-in motion shapes, contour curves, and rhythm patterns. Mix and match presets to discover unexpected melodies.</p>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/screenshots/presets.png" alt="TC-01 motion contour rhythm presets" class="w-full rounded-2xl shadow-lg border-2 border-accent" />
+          </div>
+        </div>
+
+        <!-- Row 4: Phrase Generation — image left, text right -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+          <div class="md:order-last">
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">Phrase Generation</h3>
+            </div>
+            <p class="text-body">Generate complete musical phrases with one tap. TC-01 combines your settings into playable melodies — tweak the results or start fresh.</p>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/screenshots/Phrase TR-8.png" alt="TC-01 phrase generation screen" class="w-48 md:w-56 rounded-2xl shadow-lg border-2 border-accent" />
+          </div>
+        </div>
+
+        <!-- Row 5: Microtonal Support — text left, image right -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">Microtonal Support</h3>
+            </div>
+            <p class="text-body">Go beyond standard tuning. TC-01 include microtonal scales, allowing you to expand the sonic palette of your melodies, into new and exciting territories.</p>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/screenshots/Microtone.png" alt="TC-01 microtonal tuning screen" class="w-full rounded-2xl shadow-lg border-2 border-accent" />
+          </div>
+        </div>
+
+        <!-- Row 6: Note Edit Tracker — image left, text right (no border-b) -->
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16">
+          <div class="md:order-last">
+            <div class="flex items-center gap-3 mb-3">
+              <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+              </svg>
+              <h3 class="text-xl font-bold text-heading">Note Edit Tracker</h3>
+            </div>
+            <p class="text-body">See every change you make, note by note. The edit tracker keeps a full history so you can undo, compare, and refine your melodies.</p>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/screenshots/NoteEditorWithShimmer.png" alt="TC-01 note editor with shimmer effect" class="w-48 md:w-56 rounded-2xl shadow-lg border-2 border-accent" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="bg-surface py-24">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-heading text-center mb-4">Free vs Pro</h2>
+        <p class="text-body text-center mb-12">Start free. Unlock more when you're ready.</p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <!-- Free column -->
+          <div class="bg-surface-alt rounded-2xl p-8 border border-white/10">
+            <h3 class="text-xl font-bold text-heading mb-2">Free</h3>
+            <ul class="space-y-3 text-body text-sm">
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>Record Voice</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>Phrase Generation</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>Motion / Contour / Rhythm Presets</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>Microtonal Support</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>MIDI Import</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pro column — accent border for visual distinction -->
+          <div class="bg-surface-alt rounded-2xl p-8 border-2 border-accent">
+            <h3 class="text-xl font-bold text-heading mb-2">Pro</h3>
+            <ul class="space-y-3 text-body text-sm mb-8">
+              <li class="flex items-center gap-2 text-heading">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>Everything in Free, plus:</span>
+              </li>
+              <li class="flex items-center gap-2 text-heading">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>Save &amp; Recall Sessions</span>
+              </li>
+              <li class="flex items-center gap-2 text-heading">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>Export Audio &amp; MIDI</span>
+              </li>
+              <li class="flex items-center gap-2 text-heading">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>Edit Mode</span>
+              </li>
+              <li class="flex items-center gap-2 text-heading">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>Add Custom Instruments</span>
+              </li>
+            </ul>
+            <a href="https://kaini-instruments.lemonsqueezy.com/buy/7c28355b-65fc-45e0-a6d1-700ff4c89755?embed=1"
+               class="lemonsqueezy-button block w-full text-center bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+              Buy a Pro License
+            </a>
+            <p class="text-body text-xs text-center mt-3">$19.99 one time purchase. License covers 3 devices on all platforms.<br>License key delivered by email &middot; Activate in-app</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-white/10 py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <span class="text-body text-sm">&copy; 2026 Kaini Instruments Ltd. All rights reserved.</span>
+          <!-- Legal links -->
+          <div class="flex gap-6">
+            <button id="contact-open" class="text-body text-sm hover:text-heading transition-colors cursor-pointer">Contact</button>
+            <a href="/privacy" class="text-body text-sm hover:text-heading transition-colors">Privacy Policy</a>
+            <a href="/terms" class="text-body text-sm hover:text-heading transition-colors">Terms of Service</a>
+            <a href="/help" class="text-body text-sm hover:text-heading transition-colors">Help</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Contact Modal -->
-    <div class="modal-overlay" id="contact-modal">
-      <div class="modal">
-        <button class="close-btn" id="contact-close">&times;</button>
-        <h2>Get in touch</h2>
-        <form action="https://formsubmit.co/support@kaini-instruments.com" method="POST">
+    <div id="contact-modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/60 backdrop-blur-sm">
+      <div class="bg-surface-alt border border-white/10 rounded-2xl shadow-2xl w-full max-w-md mx-4 p-8 relative">
+        <button id="contact-close" class="absolute top-4 right-4 text-body hover:text-heading transition-colors cursor-pointer">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+        </button>
+        <h2 class="text-2xl font-bold text-heading mb-1">Get in touch</h2>
+        <form id="contact-form" action="https://formsubmit.co/support@kaini-instruments.com" method="POST">
           <input type="hidden" name="_subject" value="New contact from kaini-instruments.com">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_next" value="https://kaini-instruments.com/">
           <input type="text" name="_honey" style="display:none">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required placeholder="Your name">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="How can we help?"></textarea>
-          <button type="submit" class="contact-btn" style="width:100%">Send Message</button>
+          <div class="mb-4">
+            <label for="contact-name" class="block text-body text-sm mb-1">Name</label>
+            <input id="contact-name" name="name" type="text" required
+              class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2.5 text-heading text-sm placeholder-body/50 focus:outline-none focus:border-accent transition-colors" placeholder="Your name">
+          </div>
+          <div class="mb-4">
+            <label for="contact-email" class="block text-body text-sm mb-1">Email</label>
+            <input id="contact-email" name="email" type="email" required
+              class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2.5 text-heading text-sm placeholder-body/50 focus:outline-none focus:border-accent transition-colors" placeholder="you@example.com">
+          </div>
+          <div class="mb-6">
+            <label for="contact-message" class="block text-body text-sm mb-1">Message</label>
+            <textarea id="contact-message" name="message" rows="4" required
+              class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2.5 text-heading text-sm placeholder-body/50 focus:outline-none focus:border-accent transition-colors resize-none" placeholder="How can we help?"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors cursor-pointer">
+            Send Message
+          </button>
         </form>
       </div>
     </div>
 
+    <!-- Contact Modal Toggle -->
     <script>
-      const modal = document.getElementById('contact-modal');
-      document.getElementById('contact-open').addEventListener('click', () => modal.classList.add('open'));
-      document.getElementById('contact-close').addEventListener('click', () => modal.classList.remove('open'));
-      modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('open'); });
+      const contactModal = document.getElementById('contact-modal');
+      const contactOpen = document.getElementById('contact-open');
+      const contactClose = document.getElementById('contact-close');
+
+      contactOpen.addEventListener('click', () => {
+        contactModal.classList.remove('hidden');
+        contactModal.classList.add('flex');
+      });
+
+      function closeContactModal() {
+        contactModal.classList.add('hidden');
+        contactModal.classList.remove('flex');
+      }
+
+      contactClose.addEventListener('click', closeContactModal);
+      contactModal.addEventListener('click', (e) => {
+        if (e.target === contactModal) closeContactModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeContactModal();
+      });
+    </script>
+
+    <!-- Vanilla JS Hamburger Toggle -->
+    <script>
+      const navToggle = document.getElementById('nav-toggle');
+      const mobileMenuDropdown = document.getElementById('mobile-menu-dropdown');
+
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        mobileMenuDropdown.classList.toggle('hidden');
+      });
+
+      // Close menu on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          navToggle.setAttribute('aria-expanded', 'false');
+          mobileMenuDropdown.classList.add('hidden');
+        }
+      });
+
+      // Close menu when a nav link is clicked (smooth scroll then close)
+      mobileMenuDropdown.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          navToggle.setAttribute('aria-expanded', 'false');
+          mobileMenuDropdown.classList.add('hidden');
+        });
+      });
     </script>
 
   </body>
