@@ -52,6 +52,9 @@
     }
     </script>
 
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
     <!-- Lemon Squeezy overlay checkout -->
     <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
 
@@ -91,9 +94,9 @@
     <section id="hero" class="pt-32 pb-24">
       <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <!-- Left column: text + CTAs -->
-        <div>
+        <div data-aos="fade-up">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-heading mb-4">
-            Create inspiring melodies in seconds. 
+            Create inspiring melodies in seconds.
           </h1>
           <p class="text-lg text-body mb-8 max-w-lg">
             The TC-01 Tone Calculator turns your ideas into melodies easily. Hum a tune, flip an existing melody, or generate something new — then export to your DAW. Available for download on all devices.
@@ -107,7 +110,7 @@
         </div>
 
         <!-- Right column: phone mockup -->
-        <div class="flex justify-center">
+        <div class="flex justify-center" data-aos="fade-up" data-aos-delay="200">
           <img src="assets/images/screenshots/phone-01.png" alt="TC-01 Melody Generator app screenshot" class="w-64 md:w-72 rounded-2xl shadow-2xl border-2 border-accent" />
         </div>
       </div>
@@ -116,13 +119,13 @@
     <!-- Features Section -->
     <section id="features" class="py-24">
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-heading text-center mb-4">Features</h2>
-        <div class="flex justify-center mb-16 mt-20">
+        <h2 class="text-3xl font-bold text-heading text-center mb-4" data-aos="fade-up">Features</h2>
+        <div class="flex justify-center mb-16 mt-20" data-aos="fade-up">
           <img src="assets/images/screenshots/DesktopMainUI.png" alt="TC-01 desktop main interface" class="w-3/4 rounded-2xl shadow-lg border-2 border-accent" />
         </div>
 
         <!-- Row 1: Record Voice — text left, image right -->
-        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10" data-aos="fade-right">
           <div>
             <div class="flex items-center gap-3 mb-3">
               <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -138,7 +141,7 @@
         </div>
 
         <!-- Row 2: MIDI Import — image left, text right -->
-        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10" data-aos="fade-left">
           <div class="md:order-last">
             <div class="flex items-center gap-3 mb-3">
               <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -154,7 +157,7 @@
         </div>
 
         <!-- Row 3: Motion / Contour / Rhythm Presets — text left, video right -->
-        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10" data-aos="fade-right">
           <div>
             <div class="flex items-center gap-3 mb-3">
               <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -170,7 +173,7 @@
         </div>
 
         <!-- Row 4: Phrase Generation — image left, text right -->
-        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10" data-aos="fade-left">
           <div class="md:order-last">
             <div class="flex items-center gap-3 mb-3">
               <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -186,7 +189,7 @@
         </div>
 
         <!-- Row 5: Microtonal Support — text left, image right -->
-        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10">
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16 border-b border-white/10" data-aos="fade-right">
           <div>
             <div class="flex items-center gap-3 mb-3">
               <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -202,7 +205,7 @@
         </div>
 
         <!-- Row 6: Note Edit Tracker — image left, text right (no border-b) -->
-        <div class="grid md:grid-cols-2 gap-12 items-center py-16">
+        <div class="grid md:grid-cols-2 gap-12 items-center py-16" data-aos="fade-left">
           <div class="md:order-last">
             <div class="flex items-center gap-3 mb-3">
               <svg class="w-8 h-8 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -223,13 +226,13 @@
     <!-- Pricing Section -->
     <section id="pricing" class="py-24">
       <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-heading text-center mb-4">Free vs Pro</h2>
-        <p class="text-body text-center mb-12">Start free. Unlock more when you're ready.</p>
+        <h2 class="text-3xl font-bold text-heading text-center mb-4" data-aos="fade-up">Free vs Pro</h2>
+        <p class="text-body text-center mb-12" data-aos="fade-up">Start free. Unlock more when you're ready.</p>
 
         <div class="grid md:grid-cols-2 gap-6">
 
           <!-- Free column -->
-          <div class="bg-surface-alt rounded-2xl p-8 border border-white/10">
+          <div class="bg-surface-alt rounded-2xl p-8 border border-white/10" data-aos="fade-up" data-aos-delay="100">
             <h3 class="text-xl font-bold text-heading mb-2">Free</h3>
             <ul class="space-y-3 text-body text-sm">
               <li class="flex items-center gap-2">
@@ -266,7 +269,7 @@
           </div>
 
           <!-- Pro column — accent border for visual distinction -->
-          <div class="bg-surface-alt rounded-2xl p-8 border-2 border-accent">
+          <div class="bg-surface-alt rounded-2xl p-8 border-2 border-accent" data-aos="fade-up" data-aos-delay="200">
             <h3 class="text-xl font-bold text-heading mb-2">Pro</h3>
             <ul class="space-y-3 text-body text-sm mb-8">
               <li class="flex items-center gap-2 text-heading">
@@ -434,6 +437,9 @@
         document.body.prepend(wrapper);
       });
     </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 600, once: true, offset: 80 });</script>
 
   </body>
 </html>
