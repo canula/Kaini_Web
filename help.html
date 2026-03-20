@@ -81,6 +81,7 @@
           <a href="#export" class="block text-body hover:text-accent transition-colors">Export</a>
           <a href="#project-management" class="block text-body hover:text-accent transition-colors">Project Management</a>
           <a href="#install-app" class="block text-body hover:text-accent transition-colors">Install the App</a>
+          <a href="#your-data" class="block text-body hover:text-accent transition-colors">Your Data</a>
           <a href="#activating-pro" class="block text-body hover:text-accent transition-colors">Activating Pro</a>
         </nav>
       </div>
@@ -99,6 +100,7 @@
             <a href="#export" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Export</a>
             <a href="#project-management" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Project Management</a>
             <a href="#install-app" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Install the App</a>
+            <a href="#your-data" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Your Data</a>
             <a href="#activating-pro" class="sidebar-link block border-l-2 border-transparent pl-3 py-1.5 text-body hover:text-heading transition-colors">Activating Pro</a>
           </nav>
         </aside>
@@ -291,6 +293,66 @@
               <div class="bg-surface-alt rounded-lg p-4 border border-white/10">
                 <p class="font-medium text-heading mb-1">Offline Use</p>
                 <p class="text-body text-xs">After installing, the app caches all assets and works fully offline. Audio samples are cached on first use. Your projects are stored locally on your device.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 9. Your Data -->
+          <section id="your-data">
+            <h2 class="text-2xl font-bold text-heading mb-4 border-b border-white/10 pb-3 flex items-center gap-2">
+              <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>
+              Your Data
+            </h2>
+
+            <p class="mb-4">TC-01 stores all your data — projects, presets, and settings — locally on your device using your browser's storage. There is no cloud sync, so it's important to understand how this works.</p>
+
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-base font-semibold text-heading mb-2">Each Browser &amp; Device Is Separate</h3>
+                <p class="text-body text-sm mb-2">Your data is tied to the specific browser and device you use. For example:</p>
+                <ul class="space-y-2 text-body text-sm">
+                  <li class="flex items-start gap-2">
+                    <span class="text-accent mt-0.5">&#x2022;</span>
+                    <span>Chrome and Edge on the same computer have <strong class="text-heading">separate storage</strong> — presets saved in one won't appear in the other.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-accent mt-0.5">&#x2022;</span>
+                    <span>Your phone and your desktop are separate, even if you use the same browser on both.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-accent mt-0.5">&#x2022;</span>
+                    <span>An installed PWA shares storage with the browser it was installed from — your data carries over.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-base font-semibold text-heading mb-2">App Updates</h3>
+                <p class="text-body text-sm mb-3"><strong class="text-heading">Your projects, presets, and settings are preserved</strong> across updates — only app code is replaced, never your data.</p>
+                <p class="text-body text-sm mb-2">When a new version is available, the app detects the change automatically. You'll see a notification at the bottom of the screen with an <strong class="text-heading">Update</strong> button — tap it to reload with the new version. The notification won't interrupt your session; it sits there until you're ready. If you're offline, you'll see the prompt next time you connect.</p>
+              </div>
+
+              <div>
+                <h3 class="text-base font-semibold text-heading mb-2">What Can Delete Your Data</h3>
+                <ul class="space-y-2 text-body text-sm">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" /></svg>
+                    <span><strong class="text-heading">Clearing browser data / cache</strong> — this wipes all locally stored data including your presets and projects.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" /></svg>
+                    <span><strong class="text-heading">Uninstalling the app</strong> — on most platforms, removing the PWA deletes its stored data.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" /></svg>
+                    <span><strong class="text-heading">Using private / incognito mode</strong> — data is discarded when the window closes.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-surface-alt rounded-lg p-4 border-l-4 border-accent">
+                <p class="font-medium text-heading mb-1">Back Up Your Work</p>
+                <p class="text-body text-xs">Use <strong class="text-heading">Save Project</strong> (<span class="font-mono text-accent">Ctrl+S</span>) regularly to export .kai files to your computer. This is the safest way to protect your presets and compositions. If anything happens to your browser data, you can reload your .kai files on any device. <span class="text-accent font-medium">Pro</span></p>
               </div>
             </div>
           </section>
