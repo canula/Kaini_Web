@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/tone-calculator/sw.js', { scope: '/tone-calculator/' })})}
